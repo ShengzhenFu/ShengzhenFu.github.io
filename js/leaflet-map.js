@@ -1,5 +1,5 @@
 function initMap() {
-    var latLong = [50.084750, 8.247026]; // Wiesbaden
+    var latLong = [114.136121,22.562033]; // Shenzhen
 
     var map = L.map("map").setView(latLong, 5);
 
