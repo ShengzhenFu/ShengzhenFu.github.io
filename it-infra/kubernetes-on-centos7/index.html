@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-12T21:50:02 CST">
+<title>k8s - CentOS7 - Installation :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/it-infra/kubernetes-on-centos7/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="/it-infra/">IT - Infrastructure</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item active">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option> 
+      <option value="/java-for-beginners/day01/" >- Day 01</option>
+      <option value="/java-for-beginners/day02/" >- Day 02</option>
+  
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option> 
+      <option value="/getting-start/installation/" >- Installation</option>
+      <option value="/getting-start/configuration/" >- Configuration</option>
+  
+    <option value="/it-infra/" >
+   IT - Infrastructure</option> 
+      <option value="/it-infra/kubernetes-on-centos7/"  selected>- k8s - CentOS7 - Installation</option>
+  
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>k8s - CentOS7 - Installation</h1>
+    
+    
+    
+    
+
+<h1 id="kubernetes-installation-on-centos7">kubernetes installation on Centos7</h1>
+
+<p><em>介绍下环境，4个节点的情况如下：</em></p>
+
+<table>
+<thead>
+<tr>
+<th>节点名</th>
+<th>IP</th>
+<th>OS</th>
+<th>安装软件</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Master</td>
+<td>10.211.55.6</td>
+<td>Centos7</td>
+<td>kubeadm，kubelet，kubectl，docker</td>
+</tr>
+
+<tr>
+<td>Node1</td>
+<td>10.211.55.7</td>
+<td>Centos7</td>
+<td>kubeadm，kubelet，kubectl，docker</td>
+</tr>
+
+<tr>
+<td>Node2</td>
+<td>10.211.55.8</td>
+<td>Centos7</td>
+<td>kubeadm，kubelet，kubectl，docker</td>
+</tr>
+
+<tr>
+<td>Node3</td>
+<td>10.211.55.9</td>
+<td>Centos7</td>
+<td>kubeadm，kubelet，kubectl，docker</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>其中kubeadm,kubectl,kubelet的版本为v1.10.0，docker的版本为1.13.1。</em></p>
+
+<p><strong><em>一.各节点前期的准备工作：</em></strong></p>
+
+<p><em>1.关闭并停用防火墙</em></p>
+
+<p>​    <em>systemctl stop firewalld.service</em></p>
+
+<p>​    <em>systemctl disable firewalld.service</em></p>
+
+<p><em>2.永久关闭SELinux</em></p>
+
+<p>​    <em>vim /etc/selinux/config</em></p>
+
+<p>​    <em>SELINUX=disabled</em></p>
+
+<p><em>3.同步集群系统时间</em></p>
+
+<p>​    <em>yum -y install ntp</em></p>
+
+<p>​    *ntpdate 0.*<em>asia.pool.ntp.org</em></p>
+
+<p><em>4.重启机器</em></p>
+
+<p>​    <em>reboot</em></p>
+
+<p><strong><em>二.软件安装与配置：</em></strong></p>
+
+<p><strong><em>注意⚠️</em></strong><em>：软件源按需配置，下面给出3个源，其中kubernetes yum源必须配置，docker源如果需要安装docker-ce版本则需要安装，否则最高支持1.13.1版本。</em></p>
+
+<table>
+<thead>
+<tr>
+<th>#阿里云yum源：    wget -O /etc/yum.repos.d/CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a>    yum clean all    yum makecache</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>#docker yum源    cat &gt;&gt; /etc/yum.repos.d/docker.repo &lt;&lt;EOF    [docker-repo]    name=Docker Repository    baseurl=<a href="http://mirrors.aliyun.com/docker-engine/yum/repo/main/centos/7">http://mirrors.aliyun.com/docker-engine/yum/repo/main/centos/7</a>    enabled=1    gpgcheck=0    EOF</td>
+</tr>
+
+<tr>
+<td>#kubernetes yum源    cat &gt;&gt; /etc/yum.repos.d/kubernetes.repo &lt;&lt;EOF    [kubernetes]    name=Kubernetes    baseurl=<a href="https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/">https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</a>    enabled=1    gpgcheck=0    EOF</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>配置完源，安装软件：</em></p>
+
+<p>​    <em>yum -y install docker kubeadm kubelet kubectl</em></p>
+
+<p><em>关闭SWAP</em></p>
+
+<p>​    <em>swapoff -a</em></p>
+
+<p><em>启动docker并设为开机启动：</em></p>
+
+<p>​    <em>systemctl start docker</em></p>
+
+<p>​    <em>systemctl enable docker</em></p>
+
+<p><strong><em>参数配置：</em></strong></p>
+
+<p><em>kubelet的cgroup驱动参数需要和docker使用的一致，先查询下docker的cgroup驱动参数：</em></p>
+
+<p>​    <em>docker info |grep cgroup</em></p>
+
+<p><em>在docker v1.13.1下，该参数默认为systemd，所以更改kubelet的配置参数：</em></p>
+
+<p>​    <em>sed -i &ldquo;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&rdquo; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf</em></p>
+
+<p><em>载入配置，启动kubelet：</em></p>
+
+<p>​    <em>systemctl daemon-reload</em></p>
+
+<p>​    <em>systemctl start kubelet</em></p>
+
+<p><strong><em>注意⚠️</em></strong><em>：在启动kubeadm之前，一定要先启动kubelet，否则会显示连接不上。</em></p>
+
+<p><em>下面开始，分别操作Master节点和Node节点：</em></p>
+
+<p><em>启动Master节点：</em></p>
+
+<p>​    <em>kubeadm init &ndash;kubernetes-version=1.10.0 &ndash;token-ttl 0 &ndash;pod-network-cidr=10.244.0.0/16</em></p>
+
+<p><em>该命令表示kubenetes集群版本号为v1.10.0，token的有效时间为0表示永久有效，容器的网络段为10.244.0.0/16，由于kubeadm安装方式只能用于建立最小可用集群，所以很多addon是没有集成的，包括网络插件，需要之后安装，但网段参数需要先行配置。</em></p>
+
+<p><strong><em>注意⚠️</em></strong>*：kubenetes目前的版本较之老版本，最大区别在于核心组件都已经容器化，所以安装的过程是会自动pull镜像的，但是由于镜像基本都存放于谷歌的服务器，墙内用户是无法下载，导致安装进程卡在*<strong><em>[init] This often takes around a minute; or longer if the control plane images have to be pulled</em></strong> <em>，这里我提供两个思路：</em></p>
+
+<p><em>1.有个墙外的代理服务器，对docker配置代理，需修改/etc/sysconfig/docker文件，添加：</em></p>
+
+<p>​    *HTTP_PROXY=*<em><a href="http://proxy_ip:port">http://proxy_ip:port</a></em></p>
+
+<p>​    <em>http_proxy=$HTTP_PROXY</em></p>
+
+<p><em>重启docker：systemctl restart docker</em></p>
+
+<p>*2.事先下载好所有镜像，下面我给出v1.10.0版本<strong>基本安装</strong>下所需要的所有镜像（其他版本所需的镜像版本可能不同，以官方文档为准）：*</p>
+
+<table>
+<thead>
+<tr>
+<th>Master节点所需镜像：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>k8s.gcr.io/kube-apiserver-amd64:v1.10.0k8s.gcr.io/kube-scheduler-amd64:v1.10.0k8s.gcr.io/kube-controller-manager-amd64:v1.10.0k8s.gcr.io/kube-proxy-amd64:v1.10.0k8s.gcr.io/etcd-amd64:3.1.12k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.8k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.8k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.8k8s.gcr.io/pause-amd64:3.1quay.io/coreos/flannel:v0.9.1-amd64 （为网络插件的镜像，这里选择flannel为网络插件）</td>
+</tr>
+
+<tr>
+<td>Node节点所需镜像：</td>
+</tr>
+
+<tr>
+<td>k8s.gcr.io/kube-proxy-amd64:v1.10.0k8s.gcr.io/pause-amd64:3.1quay.io/coreos/flannel:v0.9.1-amd64（为网络插件的镜像，这里选择flannel为网络插件）</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Master节点安装成功会输出如下内容：</em></p>
+
+<p><em>[root@master kubelet.service.d]# kubeadm reset</em></p>
+
+<p><em>[preflight] Running pre-flight checks.</em></p>
+
+<p><em>[reset] Stopping the kubelet service.</em></p>
+
+<p><em>[reset] Unmounting mounted directories in &ldquo;/var/lib/kubelet&rdquo;</em></p>
+
+<p><em>[reset] Removing kubernetes-managed containers.</em></p>
+
+<p><em>[reset] Deleting contents of stateful directories: [/var/lib/kubelet /etc/cni/net.d /var/lib/dockershim /var/run/kubernetes /var/lib/etcd]</em></p>
+
+<p><em>[reset] Deleting contents of config directories: [/etc/kubernetes/manifests /etc/kubernetes/pki]</em></p>
+
+<p><em>[reset] Deleting files: [/etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/bootstrap-kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf]</em></p>
+
+<p><em>[root@master kubelet.service.d]# kubeadm init &ndash;kubernetes-version=1.10.1 &ndash;pod-network-cidr=10.244.0.0/16 &ndash;skip-preflight-checks</em></p>
+
+<p><em>Flag &ndash;skip-preflight-checks has been deprecated, it is now equivalent to &ndash;ignore-preflight-errors=all</em></p>
+
+<p><em>[init] Using Kubernetes version: v1.10.1</em></p>
+
+<p><em>[init] Using Authorization modes: [Node RBAC]</em></p>
+
+<p><em>[preflight] Running pre-flight checks.</em></p>
+
+<p>​   <em>[WARNING Service-Kubelet]: kubelet service is not enabled, please run &lsquo;systemctl enable kubelet.service&rsquo;</em></p>
+
+<p>​   <em>[WARNING FileExisting-crictl]: crictl not found in system path</em></p>
+
+<p><em>Suggestion: go get github.com/kubernetes-incubator/cri-tools/cmd/crictl</em></p>
+
+<p><em>[certificates] Generated ca certificate and key.</em></p>
+
+<p><em>[certificates] Generated apiserver certificate and key.</em></p>
+
+<p><em>[certificates] apiserver serving cert is signed for DNS names [master.kube kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 192.168.0.130]</em></p>
+
+<p><em>[certificates] Generated apiserver-kubelet-client certificate and key.</em></p>
+
+<p><em>[certificates] Generated etcd/ca certificate and key.</em></p>
+
+<p><em>[certificates] Generated etcd/server certificate and key.</em></p>
+
+<p><em>[certificates] etcd/server serving cert is signed for DNS names [localhost] and IPs [127.0.0.1]</em></p>
+
+<p><em>[certificates] Generated etcd/peer certificate and key.</em></p>
+
+<p><em>[certificates] etcd/peer serving cert is signed for DNS names [master.kube] and IPs [192.168.0.130]</em></p>
+
+<p><em>[certificates] Generated etcd/healthcheck-client certificate and key.</em></p>
+
+<p><em>[certificates] Generated apiserver-etcd-client certificate and key.</em></p>
+
+<p><em>[certificates] Generated sa key and public key.</em></p>
+
+<p><em>[certificates] Generated front-proxy-ca certificate and key.</em></p>
+
+<p><em>[certificates] Generated front-proxy-client certificate and key.</em></p>
+
+<p><em>[certificates] Valid certificates and keys now exist in &ldquo;/etc/kubernetes/pki&rdquo;</em></p>
+
+<p><em>[kubeconfig] Wrote KubeConfig file to disk: &ldquo;/etc/kubernetes/admin.conf&rdquo;</em></p>
+
+<p><em>[kubeconfig] Wrote KubeConfig file to disk: &ldquo;/etc/kubernetes/kubelet.conf&rdquo;</em></p>
+
+<p><em>[kubeconfig] Wrote KubeConfig file to disk: &ldquo;/etc/kubernetes/controller-manager.conf&rdquo;</em></p>
+
+<p><em>[kubeconfig] Wrote KubeConfig file to disk: &ldquo;/etc/kubernetes/scheduler.conf&rdquo;</em></p>
+
+<p><em>[controlplane] Wrote Static Pod manifest for component kube-apiserver to &ldquo;/etc/kubernetes/manifests/kube-apiserver.yaml&rdquo;</em></p>
+
+<p><em>[controlplane] Wrote Static Pod manifest for component kube-controller-manager to &ldquo;/etc/kubernetes/manifests/kube-controller-manager.yaml&rdquo;</em></p>
+
+<p><em>[controlplane] Wrote Static Pod manifest for component kube-scheduler to &ldquo;/etc/kubernetes/manifests/kube-scheduler.yaml&rdquo;</em></p>
+
+<p><em>[etcd] Wrote Static Pod manifest for a local etcd instance to &ldquo;/etc/kubernetes/manifests/etcd.yaml&rdquo;</em></p>
+
+<p><em>[init] Waiting for the kubelet to boot up the control plane as Static Pods from directory &ldquo;/etc/kubernetes/manifests&rdquo;.</em></p>
+
+<p><em>[init] This might take a minute or longer if the control plane images have to be pulled.</em></p>
+
+<p><em>[apiclient] All control plane components are healthy after 55.004934 seconds</em></p>
+
+<p><em>[uploadconfig] Storing the configuration used in ConfigMap &ldquo;kubeadm-config&rdquo; in the &ldquo;kube-system&rdquo; Namespace</em></p>
+
+<p><em>[markmaster] Will mark node master.kube as master by adding a label and a taint</em></p>
+
+<p><em>[markmaster] Master master.kube tainted and labelled with key/value: node-role.kubernetes.io/master=&ldquo;&rdquo;</em></p>
+
+<p><em>[bootstraptoken] Using token: e9m9do.jvfdl5dti279cf59</em></p>
+
+<p><em>[bootstraptoken] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials</em></p>
+
+<p><em>[bootstraptoken] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token</em></p>
+
+<p><em>[bootstraptoken] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster</em></p>
+
+<p><em>[bootstraptoken] Creating the &ldquo;cluster-info&rdquo; ConfigMap in the &ldquo;kube-public&rdquo; namespace</em></p>
+
+<p><em>[addons] Applied essential addon: kube-dns</em></p>
+
+<p><em>[addons] Applied essential addon: kube-proxy</em></p>
+
+<p><em>Your Kubernetes master has initialized successfully!</em></p>
+
+<p><em>To start using your cluster, you need to run the following as a regular user:</em></p>
+
+<p><em>mkdir -p $HOME/.kube</em></p>
+
+<p><em>sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</em></p>
+
+<p><em>sudo chown $(id -u):$(id -g) $HOME/.kube/config</em></p>
+
+<p><em>You should now deploy a pod network to the cluster.</em></p>
+
+<p><em>Run &ldquo;kubectl apply -f [podnetwork].yaml&rdquo; with one of the options listed at:</em></p>
+
+<p><em><a href="https://kubernetes.io/docs/concepts/cluster-administration/addons/">https://kubernetes.io/docs/concepts/cluster-administration/addons/</a></em></p>
+
+<p><em>You can now join any number of machines by running the following on each node</em></p>
+
+<p><em>as root:</em></p>
+
+<p><em>kubeadm join 192.168.0.130:6443 &ndash;token gzyfvx.kt9bt4tbt9rexbo8 &ndash;discovery-token-ca-cert-hash sha256:8d7124791b48c73a5d232759edfa84a9ab9dceeb738db08cfd066e92d0fd7549</em></p>
+
+<p><em>其中</em></p>
+
+<p>​    <em>kubeadm join 10.211.55.6:6443 &ndash;token 63nuhu.quu72c0hl95hc82m &ndash;discovery-token-ca-cert-hash sha256:3971ae49e7e5884bf191851096e39d8e28c0b77718bb2a413638057da66ed30a</em></p>
+
+<p>*是后续节点加入集群的启动命令，由于设置了<strong>&ndash;token-ttl 0</strong>，所以该命令永久有效，需保存好，kubeadm token list命令可以输出token，但不能输出完整命令，需要做hash转换。*</p>
+
+<p><strong><em>注意⚠️</em></strong>*：集群启动后要获取集群的使用权限，否则在master节点执行kubectl get nodes命令，会反馈<strong>localhost:8080* <em>connection</em> *refused</strong>,获取权限方法如下：*</p>
+
+<table>
+<thead>
+<tr>
+<th>Root用户：</th>
+<th><strong>export</strong> <strong>KUBECONFIG</strong><strong>=/etc/kubernetes/admin.conf</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>非Root用户：</td>
+<td><strong>mkdir</strong> <strong>-p</strong> <strong>$HOME</strong><strong>/.kube</strong><strong>sudo</strong> <strong>cp</strong> <strong>-i</strong> <strong>/etc/kubernetes/admin.conf</strong> <strong>$HOME</strong><strong>/.kube/config</strong><strong>sudo</strong> <strong>chown</strong> <strong>$(id</strong> <strong>-u</strong><strong>):$(id</strong> <strong>-g</strong><strong>)</strong> <strong>$HOME</strong><strong>/.kube/config</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong><em>三.安装网络插件Pod:</em></strong></p>
+
+<p><em>在成功启动Master节点后，在添加node节点之前，需要先安装网络管理插件，kubernetes可供选择的网络插件有很多，</em></p>
+
+<p>*如*<em>Calico，Canal，flannel，Kube-router,Romana,Weave Net</em></p>
+
+<p>*各种安装教程可以参考官方文档，*<em>点击这里</em></p>
+
+<p><em>本文选择flannel作为网络插件：</em></p>
+
+<p>​    <em>vim /etc/sysctl.conf，添加以下内容</em></p>
+
+<p>​    <em>net.ipv4.ip_forward=1</em></p>
+
+<p>​    <em>net.bridge.bridge-nf-call-iptables=1</em></p>
+
+<p>​    <em>net.bridge.bridge-nf-call-ip6tables=1</em></p>
+
+<p>​    <em>修改后，及时生效</em></p>
+
+<p>​    <em>sysctl -p</em></p>
+
+<p><em>执行安装：</em></p>
+
+<p><strong><em>kubectl apply -f</em></strong> <em><a href="https://raw.githubusercontent.com/coreos/flannel/v0.9.1/Documentation/kube-flannel.yml">https://raw.githubusercontent.com/coreos/flannel/v0.9.1/Documentation/kube-flannel.yml</a></em></p>
+
+<p><em>安装完成后，执行：</em></p>
+
+<p>​    <strong><em>kubectl get pods &ndash;all-namespaces</em></strong></p>
+
+<p><em>查看Pod的启动状态，一旦kube-dns Pod的启动状态为UP或者Running，集群就可以开始添加节点了。</em></p>
+
+<p><strong><em>四.添加Node节点：</em></strong></p>
+
+<p><em>启动Node节点加入集群只需启动kubelet，然后执行之前保存的命令：</em></p>
+
+<p>​    <em>systemctl start kubelet</em></p>
+
+<p>​    <em>kubeadm join 10.211.55.6:6443 &ndash;token 63nuhu.quu72c0hl95hc82m &ndash;discovery-token-ca-cert-hash sha256:3971ae49e7e5884bf191851096e39d8e28c0b77718bb2a413638057da66ed30a</em></p>
+
+<p><em>节点成功加入集群。</em></p>
+
+<p>*在主节点执行<strong>kubectl get nodes</strong>，验证集群状态，显示如下：*</p>
+
+<p><em>[root@master ~]# kubectl get nodes</em></p>
+
+<p><em>NAME      STATUS    ROLES     AGE       VERSION</em></p>
+
+<p><em>master    Ready     master    7h        v1.10.0</em></p>
+
+<p><em>node1     Ready     <none>    6h        v1.10.0</em></p>
+
+<p><em>node2     Ready     <none>    2h        v1.10.0</em></p>
+
+<p><em>node3     Ready     <none>    4h        v1.10.0</em></p>
+
+<p><em>Kubenetes v1.10.0 集群构建完成！</em></p>
+
+<p><strong><em>五.Kubernetes-Dashboard（WebUI）的安装：</em></strong></p>
+
+<p><em>和网络插件的用法一样，dashboard也是一个容器应用，同样执行安装yaml：</em></p>
+
+<p>​    <strong><em>kubectl create -f</em></strong> <em><a href="https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml">https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml</a></em></p>
+
+<p>*可以参考官方文档，<strong>点击这里</strong>。*</p>
+
+<p><em>安装完成后，执行：</em></p>
+
+<p><strong><em>kubectl get pods &ndash;all-namespaces</em></strong></p>
+
+<p><em>查看Pod的启动状态，kubernetes-dashboard启动完成后，执行：</em></p>
+
+<p>​    <em>kubectl proxy &ndash;address=10.211.55.6 &ndash;accept-hosts=&lsquo;^*$&rsquo;</em></p>
+
+<p><em>基本参数是address为master节点的IP，access-host如果不填，打开web页面会返回：</em></p>
+
+<p>​    *<h3>*<em>unauthorized<h3></em></p>
+
+<p><em>启动后控制台输出：</em></p>
+
+<p>​    <em>Starting to serve on 10.211.55.6:8001</em></p>
+
+<p><em>打开WebUI：</em></p>
+
+<p>​    <em><a href="http://10.211.55.6:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default">http://10.211.55.6:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default</a></em></p>
+
+<p><em>见如下页面：</em></p>
+
+<p><img src="https://user-images.githubusercontent.com/30173222/57582794-b099e600-74fb-11e9-8443-4c0c6e2f0cb7.png" alt="image2" /></p>
+
+<p><em>这是需要用一个可用的ClusterRole进行登录，该账户需要有相关的集群操作权限，如果跳过，则是用默认的系统角色kubernetes-dashboard（该角色在创建该容器时生成），初始状态下该角色没有任何权限，需要在系统中进行配置，角色绑定：</em></p>
+
+<p><em>在主节点上任意位置创建一个文件xxx.yaml，名字随意：</em></p>
+
+<p>​    <em>vim ClusterRoleBinding.yaml</em></p>
+
+<p>​    <em>编辑文件：</em></p>
+
+<p>​    <em>kind: ClusterRoleBinding</em></p>
+
+<p>​    <em>apiVersion: rbac.authorization.k8s.io/v1beta1</em></p>
+
+<p>​    <em>metadata:</em></p>
+
+<p>​      <em>name: kubernetes-dashboard</em></p>
+
+<p>​    <em>subjects:</em></p>
+
+<p>​      <em>- kind: ServiceAccount</em></p>
+
+<p>​        <em>name: kubernetes-dashboard</em></p>
+
+<p>​        <em>namespace: kube-system</em></p>
+
+<p>​    <em>roleRef:</em></p>
+
+<p>​      <em>kind: ClusterRole</em></p>
+
+<p>​      <em>name: cluster-admin</em></p>
+
+<p>​      <em>apiGroup: rbac.authorization.k8s.io</em></p>
+
+<p><em>保存，退出，执行该文件：</em></p>
+
+<p>​    <em>kubectl create -f ClusterRoleBinding.yaml</em></p>
+
+<p><em>再次打开WebUI，成功显示集群信息：</em></p>
+
+<p><img src="https://user-images.githubusercontent.com/30173222/57582814-f0f96400-74fb-11e9-824a-c3cc02605f91.png" alt="image3" /></p>
+
+<p>*注意⚠️*<em>：给kubernetes-dashboard角色赋予cluster-admin权限仅供测试使用，本身这种方式并不安全，建议新建一个系统角色，分配有限的集群操作权限，方法如下：</em></p>
+
+<p><em>新建一个yaml文件，写入：</em></p>
+
+<p><em>kind: ClusterRole</em> <em>#创建集群角色</em></p>
+
+<p><em>apiVersion: rbac.authorization.k8s.io/v1beta1</em></p>
+
+<p><em>metadata:</em></p>
+
+<p><em>name: dashboard</em>  <em>#角色名称</em></p>
+
+<p><em>rules:</em></p>
+
+<p>*- apiGroups: [*<em>&ldquo;*&rdquo;]</em></p>
+
+<p>*resources: [&rdquo;**<em>”]</em> <em>#所有资源</em></p>
+
+<p>*verbs: [&ldquo;get&rdquo;<strong>,* *&ldquo;watch&rdquo;</strong>,* *&ldquo;list&rdquo;<strong>,* *&ldquo;create&rdquo;</strong>,<strong>&ldquo;proxy&rdquo;</strong>,<strong>&ldquo;update</strong>”]* <em>#赋予获取，监听，列表，创建，代理，更新的权限</em></p>
+
+<p>*- apiGroups: [*<em>&ldquo;*&rdquo;]</em></p>
+
+<p>*resources: [&ldquo;pods*<em>”]</em> <em>#容器资源单独配置（在所有资源配置的基础上）</em></p>
+
+<p>*verbs: [&ldquo;delete*<em>”]</em> <em>#提供删除权限</em></p>
+
+<p><em>&mdash;</em></p>
+
+<p><em>apiVersion: v1</em></p>
+
+<p><em>kind: ServiceAccount</em>  <em>#创建ServiceAccount</em></p>
+
+<p><em>metadata:</em></p>
+
+<p><em>name: dashboard</em></p>
+
+<p><em>namespace: kube-system</em></p>
+
+<p><em>&mdash;</em></p>
+
+<p><em>kind: ClusterRoleBinding</em></p>
+
+<p><em>apiVersion: rbac.authorization.k8s.io/v1beta1</em></p>
+
+<p><em>metadata:</em></p>
+
+<p>*name: dashboard<strong>-</strong>extended*</p>
+
+<p><em>subjects:</em></p>
+
+<p>*-*<em>kind: ServiceAccount</em></p>
+
+<p>​    <em>name: dashboard</em></p>
+
+<p>​    <em>namespace:</em> <em>kube-system</em></p>
+
+<p><em>roleRef:</em></p>
+
+<p><em>kind: ClusterRole</em></p>
+
+<p>*name:*<em>dashboard</em>   <em>#填写cluster-admin代表开放全部权限</em></p>
+
+<p><em>apiGroup: rbac.authorization.k8s.io</em></p>
+
+<p><em>执行该文件，查看角色是否生成：</em></p>
+
+<p>​    <em>kubectl get serviceaccount &ndash;all-namespaces</em></p>
+
+<p><em>查询该账户的密钥名：</em></p>
+
+<p>​        <em>kubectl get secret  -n kube-system</em></p>
+
+<p><em>根据密钥名找到token：</em></p>
+
+<p>​        <em>kubectl discribe secret dashboard-token-wd9rz -n kube-system</em></p>
+
+<p><em>输出一段信息：</em></p>
+
+<p><em>将此token用于登陆WebUI即可。</em></p>
+
+<p><img src="https://user-images.githubusercontent.com/30173222/57582821-0e2e3280-74fc-11e9-9d1b-16812129cdf8.png" alt="image4" /></p>
+
+<p><em>以上便是Kubeadm安装K8S v1.10.0版本的全记录，本文用于总结与梳理，参考于官方文档，如有错漏，望予指正。</em></p>
+
+<p><strong><em>附录：</em></strong></p>
+
+<p><em>Docker官方文档</em></p>
+
+<p>*Kubernetes官方文档*/getting-start/configuration/)</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/it-infra/" title="IT - Infrastructure"> <i class="fa fa-chevron-left"></i><label>IT - Infrastructure</label></a>
+    <a class="nav nav-next" href="/create-page/" title="Create Page-Doc hub" style="margin-right: 0px;"><label>Create Page-Doc hub</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioIT-Infra/kubernetes-on-centos7.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

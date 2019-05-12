@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT - Infrastructure on Doc hub</title>
+    <link>https://shengzhenfu.github.io/it-infra/</link>
+    <description>Recent content in IT - Infrastructure on Doc hub</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://shengzhenfu.github.io/it-infra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>k8s - CentOS7 - Installation</title>
+      <link>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</guid>
+      <description>kubernetes installation on Centos7 介绍下环境，4个节点的情况如下：
+   节点名 IP OS 安装软件     Master 10.211.55.6 Centos7 kubeadm，kubelet，kubectl，docker   Node1 10.211.55.7 Centos7 kubeadm，kubelet，kubectl，docker   Node2 10.211.55.8 Centos7 kubeadm，kubelet，kubectl，docker   Node3 10.211.55.9 Centos7 kubeadm，kubelet，kubectl，docker    其中kubeadm,kubectl,kubelet的版本为v1.10.0，docker的版本为1.13.1。
+一.各节点前期的准备工作：
+1.关闭并停用防火墙
+​ systemctl stop firewalld.service
+​ systemctl disable firewalld.service
+2.永久关闭SELinux
+​ vim /etc/selinux/config
+​ SELINUX=disabled
+3.同步集群系统时间
+​ yum -y install ntp
+​ *ntpdate 0.*asia.pool.ntp.org
+4.重启机器
+​ reboot</description>
+    </item>
+    
+  </channel>
+</rss>
