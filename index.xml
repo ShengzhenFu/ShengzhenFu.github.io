@@ -38,9 +38,24 @@ Pre-requisites We assume you already have JDK and Eclipse installed on your comp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shengzhenfu.github.io/java-for-beginners/day02/</guid>
-      <description>Please Install JAVA IDE and setup JDK in your computer before you begin this tutorial.If you don’t know How to at all, we strongly suggest you to train by following this Eclipse Installation for beginners. 
- The following steps are here to help you to understand how to print data in console and use Scanner to read data from console.
-Pre-requisites We assume you already have JDK and Eclipse installed on your computer.</description>
+      <description>Day 02 Working with numbers Before we begin  create a project in Eclipse
+ create package in Eclipse
+ create class in (name it numbers) Eclipse
+ Open the class in Eclipse
+  Copy code to your class public class numbers { public static void main(String[] args) { /* * +add+ -minus- *multiply* /divide/ calculation * */ int a = 5; int b = 2; int c = -2; a += 5; //a=5, 5 + 5 = 10, a has a new value of 10 	System.</description>
+    </item>
+    
+    <item>
+      <title>Day 03</title>
+      <link>https://shengzhenfu.github.io/java-for-beginners/day03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/java-for-beginners/day03/</guid>
+      <description>Day 03 Switch statement Before we begin  create a project in Eclipse
+ create package in Eclipse
+ create class (name it switcher) in Eclipse
+ Open the class in Eclipse
+  Copy code to your class import java.util.Scanner; public class switcher { public int x; public char y; public String z; void switch_numbers(){ int x = 0; System.out.println(&amp;#34;please input a number &amp;lt;= 9: &amp;#34;); Scanner scan = new Scanner(System.</description>
     </item>
     
     <item>
@@ -57,6 +72,28 @@ role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.32&lt;/strong&gt; minimum required
 
 &lt;p&gt;The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;great documentation for beginners&lt;/a&gt;.
 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>k8s - CentOS7 - Installation</title>
+      <link>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</guid>
+      <description>kubernetes installation on Centos7 介绍下环境，4个节点的情况如下：
+   节点名 IP OS 安装软件     Master 10.211.55.6 Centos7 kubeadm，kubelet，kubectl，docker   Node1 10.211.55.7 Centos7 kubeadm，kubelet，kubectl，docker   Node2 10.211.55.8 Centos7 kubeadm，kubelet，kubectl，docker   Node3 10.211.55.9 Centos7 kubeadm，kubelet，kubectl，docker    其中kubeadm,kubectl,kubelet的版本为v1.10.0，docker的版本为1.13.1。
+一.各节点前期的准备工作：
+1.关闭并停用防火墙
+​ systemctl stop firewalld.service
+​ systemctl disable firewalld.service
+2.永久关闭SELinux
+​ vim /etc/selinux/config
+​ SELINUX=disabled
+3.同步集群系统时间
+​ yum -y install ntp
+​ *ntpdate 0.*asia.pool.ntp.org
+4.重启机器
+​ reboot</description>
     </item>
     
     <item>
@@ -208,7 +245,7 @@ This is an alert ! Usage    Parameter Default Description     theme info success
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shengzhenfu.github.io/shortcodes/attachments/</guid>
-      <description>The Attachments shortcode displays a list of files attached to a page. Example :   Attachments   BachGavotteShort.mp3  (357 kB)   Carroll_AliceAuPaysDesMerveilles.pdf  (175 kB)   adivorciarsetoca00cape.pdf  (361 kB)   hugo.png  (17 kB)   movieselectricsheep-flock-244-32500-2.mp4  (340 kB)    Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
+      <description>The Attachments shortcode displays a list of files attached to a page. Example :   Attachments   ISO27001.pdf  (471 kB)   screen_dash.jpg  (162 kB)   知足.pdf  (134 kB)    Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
  If your page is a markdown file, attachements must be place in a folder named like your page and ending with .</description>
     </item>
     

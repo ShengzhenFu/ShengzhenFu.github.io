@@ -12,6 +12,10 @@
   </url>
   
   <url>
+    <loc>https://shengzhenfu.github.io/it-infra/</loc>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/java-for-beginners/day01/</loc>
   </url>
   
@@ -20,11 +24,19 @@
   </url>
   
   <url>
+    <loc>https://shengzhenfu.github.io/java-for-beginners/day03/</loc>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/getting-start/</loc>
   </url>
   
   <url>
     <loc>https://shengzhenfu.github.io/getting-start/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</loc>
   </url>
   
   <url>

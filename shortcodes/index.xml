@@ -28,7 +28,7 @@ This is an alert ! Usage    Parameter Default Description     theme info success
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shengzhenfu.github.io/shortcodes/attachments/</guid>
-      <description>The Attachments shortcode displays a list of files attached to a page. Example :   Attachments   BachGavotteShort.mp3  (357 kB)   Carroll_AliceAuPaysDesMerveilles.pdf  (175 kB)   adivorciarsetoca00cape.pdf  (361 kB)   hugo.png  (17 kB)   movieselectricsheep-flock-244-32500-2.mp4  (340 kB)    Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
+      <description>The Attachments shortcode displays a list of files attached to a page. Example :   Attachments   ISO27001.pdf  (471 kB)   screen_dash.jpg  (162 kB)   知足.pdf  (134 kB)    Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
  If your page is a markdown file, attachements must be place in a folder named like your page and ending with .</description>
     </item>
     

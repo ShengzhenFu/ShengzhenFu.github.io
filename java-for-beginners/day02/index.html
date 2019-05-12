@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-05-12T19:52:11 CST">
+<meta name="revised" content="2019-05-12T22:30:58 CST">
 <title>Day 02 :: Doc hub</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -83,6 +83,29 @@
         <div>
           <a href="/java-for-beginners/day02/">
             Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -248,6 +271,12 @@
       <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -368,6 +397,11 @@
    A Java Tutorial for Beginners</option> 
       <option value="/java-for-beginners/day01/" >- Day 01</option>
       <option value="/java-for-beginners/day02/"  selected>- Day 02</option>
+      <option value="/java-for-beginners/day03/" >- Day 03</option>
+  
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option> 
+      <option value="/it-infra/kubernetes-on-centos7/" >- k8s - CentOS7 - Installation</option>
   
     <option value="/getting-start/" >
    Getting started - Doc hub</option> 
@@ -410,29 +444,7 @@
     
     
 
-<div class="alert 
-alert-warning"
- 
-role="alert"><p>Please Install <strong>JAVA</strong> <strong>IDE</strong> and setup <strong>JDK</strong> in your computer before you begin this tutorial.If you don’t know How to  at all, we strongly suggest you to train by following this <a href="https://wiki.eclipse.org/Eclipse/Installation#Install_a_JVM">Eclipse Installation for beginners</a>.
-<!--more--></p>
-</div>
-
-
-<p>The following steps are here to help you to understand how to print data in console and use Scanner to read data from console.</p>
-
-<h2 id="pre-requisites">Pre-requisites</h2>
-
-<p>We assume you already have JDK and Eclipse installed on your computer.</p>
-
-<p>Before start real work:</p>
-
-<ol>
-<li><p>Install Jave JDK</p></li>
-
-<li><p>Install Eclipse <a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>  or IEDA <a href="http://www.jetbrains.com/idea/download/#section=linux">http://www.jetbrains.com/idea/download/#section=linux</a></p></li>
-
-<li><p>Copy &amp; paste below example to your Eclipse or IEDA</p></li>
-</ol>
+<h1 id="day-02-working-with-numbers">Day 02 Working with numbers</h1>
 
 <h3 id="before-we-begin">Before we begin</h3>
 
@@ -441,72 +453,65 @@ role="alert"><p>Please Install <strong>JAVA</strong> <strong>IDE</strong> and se
 
 <li><p>create package in Eclipse</p></li>
 
-<li><p>create class in Eclipse</p></li>
+<li><p>create class in (name it <strong>numbers</strong>) Eclipse</p></li>
 
 <li><p>Open the class in Eclipse</p></li>
 </ol>
 
 <h3 id="copy-code-to-your-class">Copy code to your class</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#111">java.util.Scanner</span><span style="color:#f92672">;</span>
-
-<span style="color:#75715e">/*
-</span><span style="color:#75715e"> * this example is to let you know 
-</span><span style="color:#75715e"> * how to read input from console
-</span><span style="color:#75715e"> * how to print it in the console
-</span><span style="color:#75715e"> * */</span>
-<span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">profile_print</span> <span style="color:#f92672">{</span>
-    <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#111">name</span><span style="color:#f92672">;</span>
-    <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#111">country</span><span style="color:#f92672">;</span>
-    <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#111">hobby</span><span style="color:#f92672">;</span>
-    <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#111">wechat</span><span style="color:#f92672">;</span>
-    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">int</span> <span style="color:#111">age</span><span style="color:#f92672">;</span>
-
-    <span style="color:#00a8c8">public</span> <span style="color:#75af00">profile_print</span><span style="color:#f92672">(</span><span style="color:#111">String</span> <span style="color:#111">name</span><span style="color:#f92672">,</span> <span style="color:#111">String</span> <span style="color:#111">country</span><span style="color:#f92672">,</span> <span style="color:#111">String</span> <span style="color:#111">hobby</span><span style="color:#f92672">,</span> <span style="color:#111">String</span> <span style="color:#111">wechat</span><span style="color:#f92672">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">age</span><span style="color:#f92672">){</span>
-        <span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">name</span> <span style="color:#f92672">=</span> <span style="color:#111">name</span><span style="color:#f92672">;</span>
-        <span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">country</span> <span style="color:#f92672">=</span> <span style="color:#111">country</span><span style="color:#f92672">;</span>
-        <span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">hobby</span> <span style="color:#f92672">=</span> <span style="color:#111">hobby</span><span style="color:#f92672">;</span>
-        <span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">wechat</span> <span style="color:#f92672">=</span> <span style="color:#111">wechat</span><span style="color:#f92672">;</span>
-        <span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">age</span> <span style="color:#f92672">=</span> <span style="color:#111">age</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">run</span><span style="color:#f92672">(){</span>
-        <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;your profile_print:\nname: &#34;</span><span style="color:#f92672">+</span><span style="color:#111">name</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34;\ncountry: &#34;</span><span style="color:#f92672">+</span><span style="color:#111">country</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34;\nhobby: &#34;</span><span style="color:#f92672">+</span><span style="color:#111">hobby</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34;\nwechat: &#34;</span><span style="color:#f92672">+</span><span style="color:#111">wechat</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34;\nage: &#34;</span><span style="color:#f92672">+</span><span style="color:#111">age</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">main</span><span style="color:#f92672">(</span><span style="color:#111">String</span><span style="color:#f92672">[]</span> <span style="color:#111">arg</span><span style="color:#f92672">){</span>
-        <span style="color:#111">Scanner</span> <span style="color:#111">reader</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Scanner</span><span style="color:#f92672">(</span><span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">in</span><span style="color:#f92672">);</span>
-        <span style="color:#111">String</span> <span style="color:#111">name</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">null</span><span style="color:#f92672">;</span>
-        <span style="color:#111">String</span> <span style="color:#111">country</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">null</span><span style="color:#f92672">;</span>
-        <span style="color:#111">String</span> <span style="color:#111">hobby</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">null</span><span style="color:#f92672">;</span>
-        <span style="color:#111">String</span> <span style="color:#111">wechat</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">null</span><span style="color:#f92672">;</span>
-        <span style="color:#00a8c8">int</span> <span style="color:#111">age</span> <span style="color:#f92672">=</span> <span style="color:#111">0</span><span style="color:#f92672">;</span>
-
-        <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;what is your name: &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#00a8c8">while</span><span style="color:#f92672">(</span><span style="color:#111">reader</span><span style="color:#f92672">.</span><span style="color:#75af00">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            <span style="color:#111">name</span> <span style="color:#f92672">=</span> <span style="color:#111">reader</span><span style="color:#f92672">.</span><span style="color:#75af00">nextLine</span><span style="color:#f92672">();</span>
-            <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;which country you are: &#34;</span><span style="color:#f92672">);</span>
-            <span style="color:#111">country</span> <span style="color:#f92672">=</span> <span style="color:#111">reader</span><span style="color:#f92672">.</span><span style="color:#75af00">nextLine</span><span style="color:#f92672">();</span>
-            <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;what is your hobby: &#34;</span><span style="color:#f92672">);</span>
-            <span style="color:#111">hobby</span> <span style="color:#f92672">=</span> <span style="color:#111">reader</span><span style="color:#f92672">.</span><span style="color:#75af00">nextLine</span><span style="color:#f92672">();</span>
-            <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;your wechat id: &#34;</span><span style="color:#f92672">);</span>
-            <span style="color:#111">wechat</span> <span style="color:#f92672">=</span> <span style="color:#111">reader</span><span style="color:#f92672">.</span><span style="color:#75af00">nextLine</span><span style="color:#f92672">();</span>
-            <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;how old are you&#34;</span><span style="color:#f92672">);</span>
-            <span style="color:#111">age</span> <span style="color:#f92672">=</span> <span style="color:#111">reader</span><span style="color:#f92672">.</span><span style="color:#75af00">nextInt</span><span style="color:#f92672">();</span>
-            <span style="color:#00a8c8">break</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#111">profile_print</span> <span style="color:#111">show</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">profile_print</span><span style="color:#f92672">(</span><span style="color:#111">name</span><span style="color:#f92672">,</span> <span style="color:#111">country</span><span style="color:#f92672">,</span> <span style="color:#111">hobby</span><span style="color:#f92672">,</span> <span style="color:#111">wechat</span><span style="color:#f92672">,</span> <span style="color:#111">age</span><span style="color:#f92672">);</span>
-        <span style="color:#00a8c8">if</span><span style="color:#f92672">(</span><span style="color:#111">age</span> <span style="color:#f92672">&gt;</span><span style="color:#111">0</span> <span style="color:#f92672">&amp;</span> <span style="color:#111">age</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">150</span><span style="color:#f92672">){</span>
-            <span style="color:#111">show</span><span style="color:#f92672">.</span><span style="color:#75af00">run</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#00a8c8">else</span> <span style="color:#f92672">{</span>
-            <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;the age you input is not correct, please try again&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-
-    <span style="color:#f92672">}</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">numbers</span> <span style="color:#f92672">{</span>
+	<span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">main</span><span style="color:#f92672">(</span><span style="color:#111">String</span><span style="color:#f92672">[]</span> <span style="color:#111">args</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">/*
+</span><span style="color:#75715e">		 * +add+ -minus- *multiply* /divide/ calculation 
+</span><span style="color:#75715e">		 * */</span>
+		<span style="color:#00a8c8">int</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span>
+		<span style="color:#00a8c8">int</span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">2</span><span style="color:#f92672">;</span>
+		<span style="color:#00a8c8">int</span> <span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#111">2</span><span style="color:#f92672">;</span>
+		<span style="color:#111">a</span> <span style="color:#f92672">+=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span>  <span style="color:#75715e">//a=5, 5 + 5 = 10, a has a new value of 10
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 10
+</span><span style="color:#75715e"></span>		<span style="color:#111">a</span> <span style="color:#f92672">*=</span> <span style="color:#111">10</span><span style="color:#f92672">;</span> <span style="color:#75715e">// a=10, 10 * 10 =100, a has a new value of 100
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 100
+</span><span style="color:#75715e"></span>		<span style="color:#111">a</span> <span style="color:#f92672">/=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span> <span style="color:#75715e">// a = 100, 100 / 5 = 20, a has new value of 20
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 20
+</span><span style="color:#75715e"></span>		
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">b</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">b</span><span style="color:#f92672">+</span><span style="color:#111">2</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 2 + 2 =4 , b has a new value of 4
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">c</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// -2
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">c</span><span style="color:#f92672">+</span><span style="color:#111">2</span><span style="color:#f92672">);</span> <span style="color:#75715e">// -2 + 2 =0, c has a new value of 0
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">/*
+</span><span style="color:#75715e">		 * mod calculation
+</span><span style="color:#75715e">		 * */</span>
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">10</span> <span style="color:#f92672">%</span> <span style="color:#111">4</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 10 mod 4 = 2
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">15</span> <span style="color:#f92672">%</span> <span style="color:#111">4</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 15 mod 4 = 3
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">16</span> <span style="color:#f92672">%</span> <span style="color:#111">4</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 16 mod 4 = 0
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">/*
+</span><span style="color:#75715e">		 * increamental &amp; decreamental numbers
+</span><span style="color:#75715e">		 * */</span>
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;increamental &amp; decreamental numbers&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#00a8c8">int</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span><span style="color:#111">3</span><span style="color:#f92672">;</span>
+		<span style="color:#111">x</span><span style="color:#f92672">++;</span>
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
+		<span style="color:#111">x</span><span style="color:#f92672">--;</span>
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">++</span><span style="color:#111">x</span><span style="color:#f92672">;</span>
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">--</span><span style="color:#111">x</span><span style="color:#f92672">;</span>
+		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
+		
+		<span style="color:#00a8c8">int</span> <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span>
+		<span style="color:#00a8c8">int</span> <span style="color:#111">z</span> <span style="color:#f92672">=</span> <span style="color:#f92672">++</span><span style="color:#111">y</span><span style="color:#f92672">;</span> <span style="color:#75715e">//y increased, then add to z, so z value is 6
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">y</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 6
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">z</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 6
+</span><span style="color:#75715e"></span>		
+		<span style="color:#00a8c8">int</span> <span style="color:#111">h</span> <span style="color:#f92672">=</span> <span style="color:#111">3</span><span style="color:#f92672">;</span>
+		<span style="color:#00a8c8">int</span> <span style="color:#111">j</span> <span style="color:#f92672">=</span> <span style="color:#111">h</span><span style="color:#f92672">++;</span> <span style="color:#75715e">// h value give to j, then h increased
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">h</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 4
+</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">j</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 3
+</span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span></code></pre></div>
-<h2 id="day-02">Day 02</h2>
+<h2 id="day-03">Day 03</h2>
 
-<p><a href="/java-for-beginners/day02/">Day 02</a></p>
+<p><a href="/java-for-beginners/day03/">Day 03</a></p>
 
 
     
@@ -514,7 +519,7 @@ role="alert"><p>Please Install <strong>JAVA</strong> <strong>IDE</strong> and se
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/java-for-beginners/day01/" title="Day 01"> <i class="fa fa-chevron-left"></i><label>Day 01</label></a>
-    <a class="nav nav-next" href="/getting-start/" title="Getting started - Doc hub" style="margin-right: 0px;"><label>Getting started - Doc hub</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/java-for-beginners/day03/" title="Day 03" style="margin-right: 0px;"><label>Day 03</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
