@@ -59,6 +59,19 @@ Pre-requisites We assume you already have JDK and Eclipse installed on your comp
     </item>
     
     <item>
+      <title>Day 04</title>
+      <link>https://shengzhenfu.github.io/java-for-beginners/day04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/java-for-beginners/day04/</guid>
+      <description>Day 04 Equal statement Before we begin  create a project in Eclipse
+ create package in Eclipse
+ create class (name it equal) in Eclipse
+ Open the class in Eclipse
+  Copy code to your class public class equal { public static void main(String[] args) { System.out.println(1 == 2); //false 	System.out.println(2 == 2); //true 	int a = 1; int b = 1; boolean c = a == b; // boolean c = true; 	System.</description>
+    </item>
+    
+    <item>
       <title>Installation</title>
       <link>https://shengzhenfu.github.io/getting-start/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
