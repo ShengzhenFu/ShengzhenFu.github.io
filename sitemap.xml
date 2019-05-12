@@ -3,18 +3,224 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/logo/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/java-for-beginners/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/java-for-beginners/day01/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/java-for-beginners/day02/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/getting-start/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/getting-start/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/extramenu/</loc>
+    <lastmod>2017-04-29T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/getting-start/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/customize-style/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/create-page/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/create-page/homepage/</loc>
+    <lastmod>2017-04-28T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/create-page/page-images/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/create-page/myslide/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/create-page/page-slide/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/_footer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/_header/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shengzhenfu.github.io/tags/</loc>
+    <loc>https://shengzhenfu.github.io/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/customize-style/disable/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/showcase/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/tags/tag1/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shengzhenfu.github.io/</loc>
+    <loc>https://shengzhenfu.github.io/tags/tag2/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/tags/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/customize-style/themestyle/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/content-organisation/customize-style/theme-variants/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/alert/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/attachments/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/button/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/excerpt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/excerpt-include/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/expand/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/icon/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/mermaid/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/notice/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-1/children-1-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-1/children-1-1/children-1-1-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/children/children-2/test3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/panel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/shortcodes/revealjs/</loc>
   </url>
   
 </urlset>
