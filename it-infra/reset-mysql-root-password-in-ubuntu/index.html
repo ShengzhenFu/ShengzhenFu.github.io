@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-05-13T23:27:49 CST">
-<title>Day 02 :: Doc hub</title>
+<title> :: Doc hub</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -19,13 +19,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/shengzhenfu.github.io\/";
 </script>
-<meta name="description" content="Working with **numbers**, Day 02">
+<meta name="description" content="">
 
 
 
     
   </head>
-  <body data-url="/java-for-beginners/day02/">
+  <body data-url="/it-infra/reset-mysql-root-password-in-ubuntu/">
     
       <header>
   <div class="logo">
@@ -65,7 +65,7 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/java-for-beginners/" class="dd-item parent alwaysopen haschildren
+    <li data-nav-id="/java-for-beginners/" class="dd-item alwaysopen haschildren
         ">
       <div>
       <a href="/java-for-beginners/">A Java Tutorial for Beginners</a>
@@ -79,7 +79,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/java-for-beginners/day02/" class="dd-item active">
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
         <div>
           <a href="/java-for-beginners/day02/">
             Day 02
@@ -102,7 +102,7 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/it-infra/" class="dd-item alwaysopen haschildren
+    <li data-nav-id="/it-infra/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
       <a href="/it-infra/">About IT - Infrastructure</a>
@@ -116,7 +116,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/it-infra/reset-mysql-root-password-in-ubuntu/" class="dd-item">
+      <li data-nav-id="/it-infra/reset-mysql-root-password-in-ubuntu/" class="dd-item active">
         <div>
           <a href="/it-infra/reset-mysql-root-password-in-ubuntu/">
             
@@ -410,14 +410,14 @@
     <option value="/java-for-beginners/" >
    A Java Tutorial for Beginners</option> 
       <option value="/java-for-beginners/day01/" >- Day 01</option>
-      <option value="/java-for-beginners/day02/"  selected>- Day 02</option>
+      <option value="/java-for-beginners/day02/" >- Day 02</option>
       <option value="/java-for-beginners/day03/" >- Day 03</option>
       <option value="/java-for-beginners/day04/" >- Day 04</option>
   
     <option value="/it-infra/" >
    About IT - Infrastructure</option> 
       <option value="/it-infra/kubernetes-on-centos7/" >- k8s - CentOS7 - Installation</option>
-      <option value="/it-infra/reset-mysql-root-password-in-ubuntu/" >- </option>
+      <option value="/it-infra/reset-mysql-root-password-in-ubuntu/"  selected>- </option>
   
     <option value="/getting-start/" >
    Getting started - Doc hub</option> 
@@ -454,88 +454,61 @@
       </div>
     
 
-    <h1>Day 02</h1>
+    <h1></h1>
     
     
     
     
 
-<h1 id="day-02-working-with-numbers">Day 02 Working with numbers</h1>
-
-<h3 id="before-we-begin">Before we begin</h3>
+<h1 id="reset-mysql-root-password-in-ubuntu">Reset MySQL root password in ubuntu</h1>
 
 <ol>
-<li><p>create a project in Eclipse</p></li>
-
-<li><p>create package in Eclipse</p></li>
-
-<li><p>create class in (name it <strong>numbers</strong>) Eclipse</p></li>
-
-<li><p>Open the class in Eclipse</p></li>
+<li>edit config file by</li>
 </ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf </code></pre></div>
+<ol>
+<li>in [mysqld] section, below &lsquo;skip-external-locking&rsquo; add line</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-config" data-lang="config">   skip-grant-tables</code></pre></div>
+<ol>
+<li>restart MySQL</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo systemctl restart mysql</code></pre></div>
+<ol>
+<li>enter mysql</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   mysql -u root -p</code></pre></div>
+<ol>
+<li>switch to mysql database</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">   <span style="color:#00a8c8">use</span> <span style="color:#111">mysql</span><span style="color:#111">;</span></code></pre></div>
+<ol>
+<li>change root password to &lsquo;passwd&rsquo;：</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">UPDATE</span> <span style="color:#111">mysql</span><span style="color:#111">.</span><span style="color:#111">user</span> <span style="color:#00a8c8">SET</span> <span style="color:#111">authentication_string</span><span style="color:#f92672">=</span><span style="color:#75af00">password</span><span style="color:#111">(</span><span style="color:#d88200">&#39;passwd&#39;</span><span style="color:#111">)</span> <span style="color:#00a8c8">WHERE</span> <span style="color:#111">User</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;root&#39;</span> <span style="color:#00a8c8">AND</span> <span style="color:#111">Host</span> <span style="color:#f92672">=</span><span style="color:#d88200">&#39;localhost&#39;</span><span style="color:#111">;</span></code></pre></div>
+<ol>
+<li>update plugin field：</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">UPDATE</span> <span style="color:#111">user</span> <span style="color:#00a8c8">SET</span> <span style="color:#111">plugin</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;mysql_native_password&#34;</span><span style="color:#111">;</span></code></pre></div>
+<p>（plugin field is used to authenticate user, if it is empty, server will use built-in method)</p>
 
-<h3 id="copy-code-to-your-class">Copy code to your class</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">numbers</span> <span style="color:#f92672">{</span>
-	<span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">main</span><span style="color:#f92672">(</span><span style="color:#111">String</span><span style="color:#f92672">[]</span> <span style="color:#111">args</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#75715e">/*
-</span><span style="color:#75715e">		 * +add+ -minus- *multiply* /divide/ calculation 
-</span><span style="color:#75715e">		 * */</span>
-		<span style="color:#00a8c8">int</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span>
-		<span style="color:#00a8c8">int</span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">2</span><span style="color:#f92672">;</span>
-		<span style="color:#00a8c8">int</span> <span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#111">2</span><span style="color:#f92672">;</span>
-		<span style="color:#111">a</span> <span style="color:#f92672">+=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span>  <span style="color:#75715e">//a=5, 5 + 5 = 10, a has a new value of 10
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 10
-</span><span style="color:#75715e"></span>		<span style="color:#111">a</span> <span style="color:#f92672">*=</span> <span style="color:#111">10</span><span style="color:#f92672">;</span> <span style="color:#75715e">// a=10, 10 * 10 =100, a has a new value of 100
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 100
-</span><span style="color:#75715e"></span>		<span style="color:#111">a</span> <span style="color:#f92672">/=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span> <span style="color:#75715e">// a = 100, 100 / 5 = 20, a has new value of 20
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 20
-</span><span style="color:#75715e"></span>		
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">b</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 2
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">b</span><span style="color:#f92672">+</span><span style="color:#111">2</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 2 + 2 =4 , b has a new value of 4
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">c</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// -2
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">c</span><span style="color:#f92672">+</span><span style="color:#111">2</span><span style="color:#f92672">);</span> <span style="color:#75715e">// -2 + 2 =0, c has a new value of 0
-</span><span style="color:#75715e"></span>		<span style="color:#75715e">/*
-</span><span style="color:#75715e">		 * mod calculation
-</span><span style="color:#75715e">		 * */</span>
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">10</span> <span style="color:#f92672">%</span> <span style="color:#111">4</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 10 mod 4 = 2
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">15</span> <span style="color:#f92672">%</span> <span style="color:#111">4</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 15 mod 4 = 3
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">16</span> <span style="color:#f92672">%</span> <span style="color:#111">4</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 16 mod 4 = 0
-</span><span style="color:#75715e"></span>		<span style="color:#75715e">/*
-</span><span style="color:#75715e">		 * increamental &amp; decreamental numbers
-</span><span style="color:#75715e">		 * */</span>
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;increamental &amp; decreamental numbers&#34;</span><span style="color:#f92672">);</span>
-		<span style="color:#00a8c8">int</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span><span style="color:#111">3</span><span style="color:#f92672">;</span>
-		<span style="color:#111">x</span><span style="color:#f92672">++;</span>
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
-		<span style="color:#111">x</span><span style="color:#f92672">--;</span>
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
-		<span style="color:#f92672">++</span><span style="color:#111">x</span><span style="color:#f92672">;</span>
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
-		<span style="color:#f92672">--</span><span style="color:#111">x</span><span style="color:#f92672">;</span>
-		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">);</span>
-		
-		<span style="color:#00a8c8">int</span> <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#111">5</span><span style="color:#f92672">;</span>
-		<span style="color:#00a8c8">int</span> <span style="color:#111">z</span> <span style="color:#f92672">=</span> <span style="color:#f92672">++</span><span style="color:#111">y</span><span style="color:#f92672">;</span> <span style="color:#75715e">//y increased, then add to z, so z value is 6
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">y</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 6
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">z</span><span style="color:#f92672">);</span>  <span style="color:#75715e">// 6
-</span><span style="color:#75715e"></span>		
-		<span style="color:#00a8c8">int</span> <span style="color:#111">h</span> <span style="color:#f92672">=</span> <span style="color:#111">3</span><span style="color:#f92672">;</span>
-		<span style="color:#00a8c8">int</span> <span style="color:#111">j</span> <span style="color:#f92672">=</span> <span style="color:#111">h</span><span style="color:#f92672">++;</span> <span style="color:#75715e">// h value give to j, then h increased
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">h</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 4
-</span><span style="color:#75715e"></span>		<span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">j</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 3
-</span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<h2 id="day-03">Day 03</h2>
+<ol>
+<li><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#00a8c8">flush</span> <span style="color:#111">privileges</span><span style="color:#111">;</span>
+<span style="color:#111">quit</span><span style="color:#111">;</span></code></pre></div></li>
 
-<p><a href="/java-for-beginners/day03/">Day 03</a></p>
+<li><p>revert back the config file /etc/mysql/mysql.conf.d/mysqld.cnf  by remove or comment out the line has been added.</p></li>
+
+<li><p>start mysql again and login with new passwd</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo systemctl start mysql</code></pre></div></li>
+</ol>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/java-for-beginners/day01/" title="Day 01"> <i class="fa fa-chevron-left"></i><label>Day 01</label></a>
-    <a class="nav nav-next" href="/java-for-beginners/day03/" title="Day 03" style="margin-right: 0px;"><label>Day 03</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/it-infra/kubernetes-on-centos7/" title="k8s - CentOS7 - Installation"> <i class="fa fa-chevron-left"></i><label>k8s - CentOS7 - Installation</label></a>
+    <a class="nav nav-next" href="/getting-start/" title="Getting started - Doc hub" style="margin-right: 0px;"><label>Getting started - Doc hub</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -552,7 +525,7 @@
 
     
     <div class="github-link">
-      <a href="https://shengzhenfu.github.iojava-for-beginners/day02.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://shengzhenfu.github.ioIT-Infra/Reset-MySQL-root-password-in-ubuntu.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
     

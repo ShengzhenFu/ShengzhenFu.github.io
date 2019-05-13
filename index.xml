@@ -174,6 +174,15 @@ Special syntax (in html comment) is available for adding attributes to Markdown 
     
     <item>
       <title></title>
+      <link>https://shengzhenfu.github.io/it-infra/reset-mysql-root-password-in-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/it-infra/reset-mysql-root-password-in-ubuntu/</guid>
+      <description>Reset MySQL root password in ubuntu  edit config file by  sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf   in [mysqld] section, below &amp;lsquo;skip-external-locking&amp;rsquo; add line  skip-grant-tables  restart MySQL  sudo systemctl restart mysql  enter mysql  mysql -u root -p  switch to mysql database  use mysql;  change root password to &amp;lsquo;passwd&amp;rsquo;：  UPDATE mysql.user SET authentication_string=password(&amp;#39;passwd&amp;#39;) WHERE User=&amp;#39;root&amp;#39; AND Host =&amp;#39;localhost&amp;#39;;  update plugin field：  UPDATE user SET plugin=&amp;#34;mysql_native_password&amp;#34;; （plugin field is used to authenticate user, if it is empty, server will use built-in method)</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://shengzhenfu.github.io/_footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
