@@ -88,6 +88,15 @@ role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.32&lt;/strong&gt; minimum required
     </item>
     
     <item>
+      <title>Reset - Mysql - password-ubuntu</title>
+      <link>https://shengzhenfu.github.io/it-infra/mysql-password-reset-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/it-infra/mysql-password-reset-ubuntu/</guid>
+      <description>Reset MySQL root password in ubuntu  edit config file by  sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf   in [mysqld] section, below &amp;lsquo;skip-external-locking&amp;rsquo; add line  skip-grant-tables  restart MySQL  sudo systemctl restart mysql  enter mysql  mysql -u root -p  switch to mysql database  use mysql;  change root password to &amp;lsquo;passwd&amp;rsquo;：  UPDATE mysql.user SET authentication_string=password(&amp;#39;passwd&amp;#39;) WHERE User=&amp;#39;root&amp;#39; AND Host =&amp;#39;localhost&amp;#39;;  update plugin field：  UPDATE user SET plugin=&amp;#34;mysql_native_password&amp;#34;; （plugin field is used to authenticate user, if it is empty, server will use built-in method)</description>
+    </item>
+    
+    <item>
       <title>k8s - CentOS7 - Installation</title>
       <link>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -170,15 +179,6 @@ Example from the current website, note the pre param which allows you to insert 
       <description>A basic md content page can be rendered as a reveal.js presentation full screen.
 You can, also, embed presentation in a page as a small box, using the revealjs shortcode in your md file. Formating Use your common Markdown syntax you use in Hugo, don&amp;rsquo;t forget, you can put html tags too.
 Special syntax (in html comment) is available for adding attributes to Markdown elements. This is useful for fragments, amongst other things.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shengzhenfu.github.io/it-infra/reset-mysql-root-password-in-ubuntu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shengzhenfu.github.io/it-infra/reset-mysql-root-password-in-ubuntu/</guid>
-      <description>Reset MySQL root password in ubuntu  edit config file by  sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf   in [mysqld] section, below &amp;lsquo;skip-external-locking&amp;rsquo; add line  skip-grant-tables  restart MySQL  sudo systemctl restart mysql  enter mysql  mysql -u root -p  switch to mysql database  use mysql;  change root password to &amp;lsquo;passwd&amp;rsquo;：  UPDATE mysql.user SET authentication_string=password(&amp;#39;passwd&amp;#39;) WHERE User=&amp;#39;root&amp;#39; AND Host =&amp;#39;localhost&amp;#39;;  update plugin field：  UPDATE user SET plugin=&amp;#34;mysql_native_password&amp;#34;; （plugin field is used to authenticate user, if it is empty, server will use built-in method)</description>
     </item>
     
     <item>

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-05-13T23:27:49 CST">
+<meta name="revised" content="2019-05-13T23:41:15 CST">
 <title>About IT - Infrastructure :: Doc hub</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -109,17 +109,17 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
         <div>
           <a href="/it-infra/kubernetes-on-centos7/">
             k8s - CentOS7 - Installation
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/it-infra/reset-mysql-root-password-in-ubuntu/" class="dd-item">
-        <div>
-          <a href="/it-infra/reset-mysql-root-password-in-ubuntu/">
-            
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -267,6 +267,36 @@
       <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
@@ -386,8 +416,8 @@
   
     <option value="/it-infra/"  selected>
    About IT - Infrastructure</option> 
+      <option value="/it-infra/mysql-password-reset-ubuntu/" >- Reset - Mysql - password-ubuntu</option>
       <option value="/it-infra/kubernetes-on-centos7/" >- k8s - CentOS7 - Installation</option>
-      <option value="/it-infra/reset-mysql-root-password-in-ubuntu/" >- </option>
   
     <option value="/getting-start/" >
    Getting started - Doc hub</option> 
@@ -444,6 +474,11 @@
 <ul class="children children-h2">
 
 <span><h2>
+		<a href="/it-infra/mysql-password-reset-ubuntu/" >Reset - Mysql - password-ubuntu</a></h2>
+<p>Reset MySQL root password in ubuntu  edit config file by  sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf   in [mysqld] section, below &lsquo;skip-external-locking&rsquo; add line  skip-grant-tables  restart MySQL  sudo systemctl restart mysql  enter mysql  mysql -u root -p  switch to mysql database  use mysql;  change root password to &lsquo;passwd&rsquo;：  UPDATE mysql.user SET authentication_string=password(&#39;passwd&#39;) WHERE User=&#39;root&#39; AND Host =&#39;localhost&#39;;  update plugin field：  UPDATE user SET plugin=&#34;mysql_native_password&#34;; （plugin field is used to authenticate user, if it is empty, server will use built-in method)</p>
+</span>
+
+<span><h2>
 		<a href="/it-infra/kubernetes-on-centos7/" >k8s - CentOS7 - Installation</a></h2>
 <p>kubernetes installation on Centos7 介绍下环境，4个节点的情况如下：
    节点名 IP OS 安装软件     Master 10.211.55.6 Centos7 kubeadm，kubelet，kubectl，docker   Node1 10.211.55.7 Centos7 kubeadm，kubelet，kubectl，docker   Node2 10.211.55.8 Centos7 kubeadm，kubelet，kubectl，docker   Node3 10.211.55.9 Centos7 kubeadm，kubelet，kubectl，docker    其中kubeadm,kubectl,kubelet的版本为v1.10.0，docker的版本为1.13.1。
@@ -460,11 +495,6 @@
 4.重启机器
 ​ reboot</p>
 </span>
-
-<span><h2>
-		<a href="/it-infra/reset-mysql-root-password-in-ubuntu/" ></a></h2>
-<p>Reset MySQL root password in ubuntu  edit config file by  sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf   in [mysqld] section, below &lsquo;skip-external-locking&rsquo; add line  skip-grant-tables  restart MySQL  sudo systemctl restart mysql  enter mysql  mysql -u root -p  switch to mysql database  use mysql;  change root password to &lsquo;passwd&rsquo;：  UPDATE mysql.user SET authentication_string=password(&#39;passwd&#39;) WHERE User=&#39;root&#39; AND Host =&#39;localhost&#39;;  update plugin field：  UPDATE user SET plugin=&#34;mysql_native_password&#34;; （plugin field is used to authenticate user, if it is empty, server will use built-in method)</p>
-</span>
 </ul>
 
 
@@ -479,7 +509,7 @@
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/java-for-beginners/day04/" title="Day 04"> <i class="fa fa-chevron-left"></i><label>Day 04</label></a>
-    <a class="nav nav-next" href="/it-infra/kubernetes-on-centos7/" title="k8s - CentOS7 - Installation" style="margin-right: 0px;"><label>k8s - CentOS7 - Installation</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/it-infra/mysql-password-reset-ubuntu/" title="Reset - Mysql - password-ubuntu" style="margin-right: 0px;"><label>Reset - Mysql - password-ubuntu</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

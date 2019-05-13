@@ -40,6 +40,10 @@
   </url>
   
   <url>
+    <loc>https://shengzhenfu.github.io/it-infra/mysql-password-reset-ubuntu/</loc>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</loc>
   </url>
   
@@ -93,10 +97,6 @@
   <url>
     <loc>https://shengzhenfu.github.io/create-page/page-slide/</loc>
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://shengzhenfu.github.io/it-infra/reset-mysql-root-password-in-ubuntu/</loc>
   </url>
   
   <url>
