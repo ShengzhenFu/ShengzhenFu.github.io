@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-15T22:29:23 CST">
+<title>11 OOZIE :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/big-data/learning-bigdata/11-oozie/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day04/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day04/">
+            Day 04
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/big-data/learning-bigdata/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/learning-bigdata/">Learning Big Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/learning-bigdata/01-intro/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/01-intro/">
+            01 Introduction - BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/02-hadoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/02-hadoop/">
+            02 Hadoop-introduction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/">
+            03 Hadoop-installation(ubuntu)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/04-hdfs/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/04-hdfs/">
+            04 HDFS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/05-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/05-mapreduce/">
+            05 MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/06-mapreduce-example/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/06-mapreduce-example/">
+            06 MapReduce-example
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/07-join-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/07-join-mapreduce/">
+            07 Join-MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/08-sqoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/08-sqoop/">
+            08 SQOOP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/09-flume/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/09-flume/">
+            09 Flume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/10-pig/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/10-pig/">
+            10 Pig
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/11-oozie/" class="dd-item active">
+        <div>
+          <a href="/big-data/learning-bigdata/11-oozie/">
+            11 OOZIE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/12-testing-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/12-testing-bigdata/">
+            12 Testing-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/13-faq/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/13-faq/">
+            13 FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/14-top-tools-of-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/14-top-tools-of-bigdata/">
+            14 Top-tools-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/">
+            15 Top-BigData-Analytics-tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option>
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option>
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option>
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/" >- 3nodes-Hadoop-installation-setup</option>
+    <option value="/big-data/learning-bigdata/" >
+  - 
+   Learning Big Data</option> 
+      <option value="/big-data/learning-bigdata/01-intro/" >-- 01 Introduction - BigData</option>
+      <option value="/big-data/learning-bigdata/02-hadoop/" >-- 02 Hadoop-introduction</option>
+      <option value="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" >-- 03 Hadoop-installation(ubuntu)</option>
+      <option value="/big-data/learning-bigdata/04-hdfs/" >-- 04 HDFS</option>
+      <option value="/big-data/learning-bigdata/05-mapreduce/" >-- 05 MapReduce</option>
+      <option value="/big-data/learning-bigdata/06-mapreduce-example/" >-- 06 MapReduce-example</option>
+      <option value="/big-data/learning-bigdata/07-join-mapreduce/" >-- 07 Join-MapReduce</option>
+      <option value="/big-data/learning-bigdata/08-sqoop/" >-- 08 SQOOP</option>
+      <option value="/big-data/learning-bigdata/09-flume/" >-- 09 Flume</option>
+      <option value="/big-data/learning-bigdata/10-pig/" >-- 10 Pig</option>
+      <option value="/big-data/learning-bigdata/11-oozie/"  selected>-- 11 OOZIE</option>
+      <option value="/big-data/learning-bigdata/12-testing-bigdata/" >-- 12 Testing-BigData</option>
+      <option value="/big-data/learning-bigdata/13-faq/" >-- 13 FAQ</option>
+      <option value="/big-data/learning-bigdata/14-top-tools-of-bigdata/" >-- 14 Top-tools-BigData</option>
+      <option value="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" >-- 15 Top-BigData-Analytics-tools</option>
+  
+  
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>11 OOZIE</h1>
+    
+    
+    
+    
+
+<p><strong>What is OOZIE?</strong></p>
+
+<p>Apache Oozie is a workflow scheduler for Hadoop. It is a system which runs the workflow of dependent jobs. Here, users are permitted to create <strong>Directed Acyclic Graphs</strong> of workflows, which can be run in parallel and sequentially in Hadoop.</p>
+
+<p>In this tutorial, you will learn,</p>
+
+<ul>
+<li><a href="https://www.guru99.com/learn-oozie-in-5-minutes.html#1">How does OOZIE work?</a></li>
+<li><a href="https://www.guru99.com/learn-oozie-in-5-minutes.html#2">Example Workflow Diagram</a></li>
+<li><a href="https://www.guru99.com/learn-oozie-in-5-minutes.html#3">Packaging and deploying an Oozie workflow application</a></li>
+<li><a href="https://www.guru99.com/learn-oozie-in-5-minutes.html#4">Why use Oozie?</a></li>
+<li><a href="https://www.guru99.com/learn-oozie-in-5-minutes.html#5">Features of Oozie</a></li>
+</ul>
+
+<p>It consists of two parts:</p>
+
+<ul>
+<li>Workflow engine: Responsibility of a workflow engine is to store and run workflows composed of Hadoop jobs e.g., MapReduce, Pig, Hive.</li>
+<li><strong>Coordinator engine</strong>: It runs workflow jobs based on predefined schedules and availability of data.</li>
+</ul>
+
+<p>Oozie is scalable and can manage the timely execution of thousands of workflows (each consisting of dozens of jobs) in a Hadoop cluster.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_1137_LearnOOZIEi1.jpg" alt="img" /></p>
+
+<p>Oozie is very much flexible, as well. One can easily start, stop, suspend and rerun jobs. Oozie makes it very easy to rerun failed workflows. One can easily understand how difficult it can be to catch up missed or failed jobs due to downtime or failure. It is even possible to skip a specific failed node.</p>
+
+<p><strong>How does OOZIE work?</strong></p>
+
+<p>Oozie runs as a service in the cluster and clients submit workflow definitions for immediate or later processing.</p>
+
+<p>Oozie workflow consists of <strong>action nodes</strong> and <strong>control-flow nodes</strong>.</p>
+
+<p>An <strong>action node</strong> represents a workflow task, e.g., moving files into HDFS, running a MapReduce, Pig or<a href="https://www.guru99.com/hive-tutorials.html"> Hive </a>jobs, importing data using Sqoop or running a shell script of a program written in Java.</p>
+
+<p>A <strong>control-flow node</strong> controls the workflow execution between actions by allowing constructs like conditional logic wherein different branches may be followed depending on the result of earlier action node.</p>
+
+<p><strong>Start Node</strong>, <strong>End Node</strong>, and <strong>Error Node</strong> fall under this category of nodes.</p>
+
+<p><strong>Start Node,</strong> designates the start of the workflow job.</p>
+
+<p><strong>End Node,</strong> signals end of the job.</p>
+
+<p><strong>Error Node</strong> designates the occurrence of an error and corresponding error message to be printed.</p>
+
+<p>At the end of execution of a workflow, HTTP callback is used by Oozie to update the client with the workflow status. Entry-to or exit from an action node may also trigger the callback.</p>
+
+<p><strong>Example Workflow Diagram</strong></p>
+
+<p><img src="https://www.guru99.com/images/pimgpsh_fullsize_distr.jpg" alt="img" /></p>
+
+<p><strong>Packaging and deploying an Oozie workflow application</strong></p>
+
+<p>A workflow application consists of the workflow definition and all the associated resources such as MapReduce Jar files, Pig scripts etc. Applications need to follow a simple directory structure and are deployed to HDFS so that Oozie can access them.</p>
+
+<p>An example directory structure is shown below-</p>
+
+<p><name of workflow>/</name> ??? lib/ ? ??? hadoop-examples.jar ??? workflow.xml</p>
+
+<p>It is necessary to keep workflow.xml (a workflow definition file) in the top level directory (parent directory with workflow name). Lib directory contains Jar files containing MapReduce classes. Workflow application conforming to this layout can be built with any build tool e.g., Ant or Maven.</p>
+
+<p>Such a build need to be copied to HDFS using a command, for example -</p>
+
+<p>% hadoop fs -put hadoop-examples/target/<name of workflow dir> name of workflow</p>
+
+<p><strong>Steps for Running an Oozie workflow job</strong></p>
+
+<p>In this section, we will see how to run a workflow job. To run this, we will use the Oozie command-line tool (a client program which communicates with the Oozie server).</p>
+
+<p><strong>1. Export OOZIE_URL environment variable which tells the oozie command which Oozie server to use (here we’re using one running locally):</strong></p>
+
+<p>% export OOZIE_URL=&ldquo;<a href="http://localhost:11000/oozie&quot;">http://localhost:11000/oozie&quot;</a></p>
+
+<p><strong>2. Run workflow job using-</strong></p>
+
+<p>% oozie job -config ch05/src/main/resources/max-temp-workflow.properties -run</p>
+
+<p>The -config option refers to a local<a href="https://www.guru99.com/java-tutorial.html"> Java </a>properties file containing definitions for the parameters in the workflow XML file, as well as oozie.wf.application.path, which tells Oozie the location of the workflow application in HDFS.</p>
+
+<p>Example contents of the properties file:</p>
+
+<p>nameNode=hdfs://localhost:8020 jobTracker=localhost:8021 oozie.wf.application.path=${nameNode}/user/${user.name}/<name of workflow></p>
+
+<p><strong>3. Get the status of workflow job-</strong></p>
+
+<p>Status of workflow job can be seen using subcommand &lsquo;job&rsquo; with &lsquo;-info&rsquo; option and specifying job id after &lsquo;-info&rsquo;.</p>
+
+<p>e.g., % oozie job -info <job id></p>
+
+<p>Output shows status which is one of RUNNING, KILLED or SUCCEEDED.</p>
+
+<p><strong>4. Results of successful workflow execution can be seen using Hadoop command like-</strong></p>
+
+<p>% hadoop fs -cat <location of result></p>
+
+<p><strong>Why use Oozie?</strong></p>
+
+<p>The main purpose of using Oozie is to manage different type of jobs being processed in Hadoop system.</p>
+
+<p>Dependencies between jobs are specified by a user in the form of Directed Acyclic Graphs. Oozie consumes this information and takes care of their execution in the correct order as specified in a workflow. That way user&rsquo;s time to manage complete workflow is saved. In addition, Oozie has a provision to specify the frequency of execution of a particular job.</p>
+
+<p><strong>Features of Oozie</strong></p>
+
+<ul>
+<li>Oozie has client API and command line interface which can be used to launch, control and monitor job from Java application.</li>
+<li>Using its Web Service APIs one can control jobs from anywhere.</li>
+<li>Oozie has provision to execute jobs which are scheduled to run periodically.</li>
+<li>Oozie has provision to send email notifications upon completion of jobs.</li>
+</ul>
+
+<h2 id="12-testing">12 Testing</h2>
+
+<p><a href="/big-data/learning-bigdata/12-testing-bigdata/">12 BigData Testing</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/big-data/learning-bigdata/10-pig/" title="10 Pig"> <i class="fa fa-chevron-left"></i><label>10 Pig</label></a>
+    <a class="nav nav-next" href="/big-data/learning-bigdata/12-testing-bigdata/" title="12 Testing-BigData" style="margin-right: 0px;"><label>12 Testing-BigData</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioBig-Data/Learning-BigData/11-Oozie.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

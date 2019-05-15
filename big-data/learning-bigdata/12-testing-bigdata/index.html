@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-15T22:29:23 CST">
+<title>12 Testing-BigData :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/big-data/learning-bigdata/12-testing-bigdata/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day04/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day04/">
+            Day 04
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/big-data/learning-bigdata/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/learning-bigdata/">Learning Big Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/learning-bigdata/01-intro/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/01-intro/">
+            01 Introduction - BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/02-hadoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/02-hadoop/">
+            02 Hadoop-introduction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/">
+            03 Hadoop-installation(ubuntu)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/04-hdfs/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/04-hdfs/">
+            04 HDFS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/05-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/05-mapreduce/">
+            05 MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/06-mapreduce-example/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/06-mapreduce-example/">
+            06 MapReduce-example
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/07-join-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/07-join-mapreduce/">
+            07 Join-MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/08-sqoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/08-sqoop/">
+            08 SQOOP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/09-flume/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/09-flume/">
+            09 Flume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/10-pig/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/10-pig/">
+            10 Pig
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/11-oozie/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/11-oozie/">
+            11 OOZIE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/12-testing-bigdata/" class="dd-item active">
+        <div>
+          <a href="/big-data/learning-bigdata/12-testing-bigdata/">
+            12 Testing-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/13-faq/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/13-faq/">
+            13 FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/14-top-tools-of-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/14-top-tools-of-bigdata/">
+            14 Top-tools-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/">
+            15 Top-BigData-Analytics-tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option>
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option>
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option>
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/" >- 3nodes-Hadoop-installation-setup</option>
+    <option value="/big-data/learning-bigdata/" >
+  - 
+   Learning Big Data</option> 
+      <option value="/big-data/learning-bigdata/01-intro/" >-- 01 Introduction - BigData</option>
+      <option value="/big-data/learning-bigdata/02-hadoop/" >-- 02 Hadoop-introduction</option>
+      <option value="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" >-- 03 Hadoop-installation(ubuntu)</option>
+      <option value="/big-data/learning-bigdata/04-hdfs/" >-- 04 HDFS</option>
+      <option value="/big-data/learning-bigdata/05-mapreduce/" >-- 05 MapReduce</option>
+      <option value="/big-data/learning-bigdata/06-mapreduce-example/" >-- 06 MapReduce-example</option>
+      <option value="/big-data/learning-bigdata/07-join-mapreduce/" >-- 07 Join-MapReduce</option>
+      <option value="/big-data/learning-bigdata/08-sqoop/" >-- 08 SQOOP</option>
+      <option value="/big-data/learning-bigdata/09-flume/" >-- 09 Flume</option>
+      <option value="/big-data/learning-bigdata/10-pig/" >-- 10 Pig</option>
+      <option value="/big-data/learning-bigdata/11-oozie/" >-- 11 OOZIE</option>
+      <option value="/big-data/learning-bigdata/12-testing-bigdata/"  selected>-- 12 Testing-BigData</option>
+      <option value="/big-data/learning-bigdata/13-faq/" >-- 13 FAQ</option>
+      <option value="/big-data/learning-bigdata/14-top-tools-of-bigdata/" >-- 14 Top-tools-BigData</option>
+      <option value="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" >-- 15 Top-BigData-Analytics-tools</option>
+  
+  
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>12 Testing-BigData</h1>
+    
+    
+    
+    
+
+<p><strong>What is Big Data Testing?</strong></p>
+
+<p>BigData testing is defined as testing of Bigdata applications. Big data is a collection of large datasets that cannot be processed using traditional computing techniques.<a href="https://www.guru99.com/software-testing.html"> Testing </a>of these datasets involves various tools, techniques, and frameworks to process. Big data relates to data creation, storage, retrieval and analysis that is remarkable in terms of volume, variety, and velocity. You can learn more about Big Data, Hadoop and MapReduce <a href="https://www.guru99.com/bigdata-tutorials.html">here</a></p>
+
+<p>In this tutorial, you will learn-</p>
+
+<ul>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#1">Big Data Testing Strategy</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#2">How to test Hadoop Applications</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#6">Architecture Testing</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#7">Performance Testing</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#8">Performance Testing Approach</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#9">Parameters for Performance Testing</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#10">Test Environment Needs</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#11">Big data Testing Vs. Traditional database Testing</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#12">Tools used in Big Data Scenarios</a></li>
+<li><a href="https://www.guru99.com/big-data-testing-functional-performance.html#13">Challenges in Big Data Testing</a></li>
+</ul>
+
+<p><strong>Big Data Testing Strategy</strong></p>
+
+<p>Testing Big Data application is more verification of its data processing rather than testing the individual features of the software product. When it comes to Big data testing, <strong>performance and functional testing</strong> are the keys.</p>
+
+<p>In Big data testing, QA engineers verify the successful processing of terabytes of data using commodity cluster and other supportive components. It demands a high level of testing skills as the processing is very fast. Processing may be of three types</p>
+
+<p><img src="https://www.guru99.com/images/6-2015/060315_1205_BigDataTest1.png" alt="img" /></p>
+
+<p>Along with this, data quality is also an important factor in Hadoop testing. Before testing the application, it is necessary to check the quality of data and should be considered as a part of database testing. <strong>It involves checking various characteristics like conformity, accuracy, duplication, consistency, validity, data completeness,</strong> etc.</p>
+
+<p><strong>How to test Hadoop Applications</strong></p>
+
+<p>The following figure gives a high-level overview of phases in Testing Big Data Applications</p>
+
+<p><img src="https://www.guru99.com/images/6-2015/060315_1205_BigDataTest2.png" alt="img" /></p>
+
+<p>Big Data Testing can be broadly divided into three steps</p>
+
+<p><strong>Step 1: Data Staging Validation</strong></p>
+
+<p>The first step of big data testing also referred as pre-Hadoop stage involves process validation.</p>
+
+<ul>
+<li>Data from various source like RDBMS, weblogs, social media, etc. should be validated to make sure that correct data is pulled into the system</li>
+<li>Comparing source data with the data pushed into the Hadoop system to make sure they match</li>
+<li>Verify the right data is extracted and loaded into the correct HDFS location</li>
+</ul>
+
+<p>Tools like <a href="https://www.talend.com/"><strong>Talend</strong></a><strong>,</strong> <a href="http://www.datameer.com/"><strong>Datameer</strong></a><strong>,</strong> can be used for data staging validation</p>
+
+<p><strong>Step 2: &ldquo;MapReduce&rdquo; Validation</strong></p>
+
+<p>The second step is a validation of &ldquo;MapReduce&rdquo;. In this stage, the tester verifies the business logic validation on every node and then validating them after running against multiple nodes, ensuring that the</p>
+
+<ul>
+<li>Map Reduce process works correctly</li>
+<li>Data aggregation or segregation rules are implemented on the data</li>
+<li>Key value pairs are generated</li>
+<li>Validating the data after the Map-Reduce process</li>
+</ul>
+
+<p><strong>Step 3: Output Validation Phase</strong></p>
+
+<p>The final or third stage of Big Data testing is the output validation process. The output data files are generated and ready to be moved to an EDW (Enterprise Data Warehouse) or any other system based on the requirement.</p>
+
+<p>Activities in the third stage include</p>
+
+<ul>
+<li>To check the transformation rules are correctly applied</li>
+<li>To check the data integrity and successful data load into the target system</li>
+<li>To check that there is no data corruption by comparing the target data with the HDFS file system data</li>
+</ul>
+
+<p><strong>Architecture Testing</strong></p>
+
+<p>Hadoop processes very large volumes of data and is highly resource intensive. Hence, architectural testing is crucial to ensure the success of your Big Data project. A poorly or improper designed system may lead to performance degradation, and the system could fail to meet the requirement. At least, <strong>Performance and Failover test</strong> services should be done in a Hadoop environment.</p>
+
+<p>Performance testing includes testing of job completion time, memory utilization, data throughput, and similar system metrics. While the motive of Failover test service is to verify that data processing occurs seamlessly in case of failure of data nodes</p>
+
+<p><strong>Performance Testing</strong></p>
+
+<p>Performance Testing for Big Data includes two main action</p>
+
+<ul>
+<li><strong>Data ingestion and Throughout</strong>: In this stage, the tester verifies how the fast system can consume data from various data source. Testing involves identifying a different message that the queue can process in a given time frame. It also includes how quickly data can be inserted into the underlying data store for example insertion rate into a Mongo and Cassandra database.</li>
+<li><strong>Data Processing</strong>: It involves verifying the speed with which the queries or map reduce jobs are executed. It also includes testing the data processing in isolation when the underlying data store is populated within the data sets. For example, running Map Reduce jobs on the underlying HDFS</li>
+<li><strong>Sub-Component Performance</strong>: These systems are made up of multiple components, and it is essential to test each of these components in isolation. For example, how quickly the message is indexed and consumed, MapReduce jobs, query performance, search, etc.</li>
+</ul>
+
+<p><strong>Performance Testing Approach</strong></p>
+
+<p>Performance testing for big data application involves testing of huge volumes of structured and unstructured data, and it requires a specific testing approach to test such massive data.</p>
+
+<p><img src="https://www.guru99.com/images/6-2015/060315_1205_BigDataTest3.png" alt="img" /></p>
+
+<p>Performance Testing is executed in this order</p>
+
+<ol>
+<li>The process begins with the setting of the Big data cluster which is to be tested for performance</li>
+<li>Identify and design corresponding workloads</li>
+<li>Prepare individual clients (Custom Scripts are created)</li>
+<li>Execute the test and analyzes the result (If objectives are not met then tune the component and re-execute)</li>
+<li>Optimum Configuration</li>
+</ol>
+
+<p><strong>Parameters for Performance Testing</strong></p>
+
+<p>Various parameters to be verified for performance testing are</p>
+
+<ul>
+<li>Data Storage: How data is stored in different nodes</li>
+<li>Commit logs: How large the commit log is allowed to grow</li>
+<li>Concurrency: How many threads can perform write and read operation</li>
+<li>Caching: Tune the cache setting &ldquo;row cache&rdquo; and &ldquo;key cache.&rdquo;</li>
+<li>Timeouts: Values for connection timeout, query timeout, etc.</li>
+<li>JVM Parameters: Heap size, GC collection algorithms, etc.</li>
+<li>Map reduce performance: Sorts, merge, etc.</li>
+<li>Message queue: Message rate, size, etc.</li>
+</ul>
+
+<p><strong>Test Environment Needs</strong></p>
+
+<p>Test Environment needs to depend on the type of application you are testing. For Big data testing, the test environment should encompass</p>
+
+<ul>
+<li>It should have enough space for storage and process a large amount of data</li>
+<li>It should have a cluster with distributed nodes and data</li>
+<li>It should have minimum CPU and memory utilization to keep performance high</li>
+</ul>
+
+<p><strong>Big data Testing Vs. Traditional database Testing</strong></p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>Traditional database testing</strong></th>
+<th><strong>Big data testing</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Data</strong></td>
+<td>Tester work with structured data</td>
+<td>Tester works with both structured as well as unstructured data</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Testing approach is well defined and time-tested</td>
+<td>The testing approach requires focused R&amp;D efforts</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Tester has the option of &ldquo;Sampling&rdquo; strategy doing manually or &ldquo;Exhaustive Verification&rdquo; strategy by the automation tool</td>
+<td>&ldquo;Sampling&rdquo; strategy in Big data is a challenge</td>
+</tr>
+
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td>It does not require a special test environment as the file size is limited</td>
+<td>It requires a special test environment due to large data size and files (HDFS)</td>
+</tr>
+
+<tr>
+<td><strong>Validation Tools</strong></td>
+<td>Tester uses either the Excel-based <a href="https://www.guru99.com/introduction-to-macros-in-excel.html">macros</a> or UI based automation tools</td>
+<td>No defined tools, the range is vast from programming tools like MapReduce to HIVEQL</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Testing Tools can be used with basic operating knowledge and less training.</td>
+<td>It requires a specific set of skills and training to operate a testing tool. Also, the tools are in their nascent stage and over time it may come up with new features.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Tools used in Big Data Scenarios</strong></p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Big Data Cluster</strong></th>
+<th><strong>Big Data Tools</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>NoSQL:</strong></td>
+<td>CouchDB, DatabasesMongoDB, Cassandra, Redis, ZooKeeper, HBase</td>
+</tr>
+
+<tr>
+<td><strong>MapReduce:</strong></td>
+<td>Hadoop, Hive, Pig, Cascading, Oozie, Kafka, S4, MapR, Flume</td>
+</tr>
+
+<tr>
+<td><strong>Storage:</strong></td>
+<td>S3, HDFS ( Hadoop Distributed File System)</td>
+</tr>
+
+<tr>
+<td><strong>Servers:</strong></td>
+<td>Elastic, Heroku, Elastic, Google App Engine, EC2</td>
+</tr>
+
+<tr>
+<td><strong>Processing</strong></td>
+<td>R, Yahoo! Pipes, Mechanical Turk, BigSheets, Datameer</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Challenges in Big Data Testing</strong></p>
+
+<ul>
+<li><strong>Automation</strong></li>
+</ul>
+
+<p>Automation testing for Big data requires someone with technical expertise. Also, automated tools are not equipped to handle unexpected problems that arise during testing</p>
+
+<ul>
+<li><strong>Virtualization</strong></li>
+</ul>
+
+<p>It is one of the integral phases of testing. Virtual machine latency creates timing problems in real time big data testing. Also managing images in Big data is a hassle.</p>
+
+<ul>
+<li><p><strong>Large Dataset</strong></p></li>
+
+<li><ul>
+<li>Need to verify more data and need to do it faster</li>
+</ul>
+
+<ul>
+<li>Need to automate the testing effort</li>
+<li>Need to be able to test across different platform</li>
+</ul></li>
+</ul>
+
+<p><strong>Performance testing challenges</strong></p>
+
+<ul>
+<li><strong>Diverse set of technologies</strong>: Each sub-component belongs to different technology and requires testing in isolation</li>
+<li><strong>Unavailability of specific tools</strong>: No single tool can perform the end-to-end testing. For example, NoSQL might not fit for message queues</li>
+<li><strong>Test Scripting</strong>: A high degree of scripting is needed to design test scenarios and test cases</li>
+<li><strong>Test environment</strong>: It needs a special test environment due to the large data size</li>
+<li><strong>Monitoring Solution</strong>: Limited solutions exists that can monitor the entire environment</li>
+<li><strong>Diagnostic Solution</strong>: a Custom solution is required to develop to drill down the performance bottleneck areas</li>
+</ul>
+
+<p><strong>Summary</strong></p>
+
+<ul>
+<li>As data engineering and data analytics advances to a next level, Big data testing is inevitable.</li>
+<li>Big data processing could be Batch, Real-Time, or Interactive</li>
+
+<li><p>3 stages of Testing Big Data applications are</p></li>
+
+<li><ul>
+<li>Data staging validation</li>
+</ul>
+
+<ul>
+<li>&ldquo;MapReduce&rdquo; validation</li>
+<li>Output validation phase</li>
+</ul></li>
+
+<li><p>Architecture Testing is the important phase of Big data testing, as poorly designed system may lead to unprecedented errors and degradation of performance</p></li>
+
+<li><p>Performance testing for Big data includes verifying</p></li>
+
+<li><ul>
+<li>Data throughput</li>
+</ul>
+
+<ul>
+<li>Data processing</li>
+<li>Sub-component performance</li>
+</ul></li>
+
+<li><p>Big data testing is very different from Traditional data testing in terms of Data, Infrastructure &amp; Validation Tools</p></li>
+
+<li><p>Big Data Testing challenges include virtualization, test automation and dealing with large dataset. Performance testing of Big Data applications is also an issue.</p></li>
+</ul>
+
+<h2 id="13-faq">13 FAQ</h2>
+
+<p><a href="/big-data/learning-bigdata/13-faq/">13 FAQ</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/big-data/learning-bigdata/11-oozie/" title="11 OOZIE"> <i class="fa fa-chevron-left"></i><label>11 OOZIE</label></a>
+    <a class="nav nav-next" href="/big-data/learning-bigdata/13-faq/" title="13 FAQ" style="margin-right: 0px;"><label>13 FAQ</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioBig-Data/Learning-BigData/12-Testing-BigData.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

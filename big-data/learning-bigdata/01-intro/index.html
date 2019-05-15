@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-15T22:29:23 CST">
+<title>01 Introduction - BigData :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/big-data/learning-bigdata/01-intro/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day04/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day04/">
+            Day 04
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/big-data/learning-bigdata/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/learning-bigdata/">Learning Big Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/learning-bigdata/01-intro/" class="dd-item active">
+        <div>
+          <a href="/big-data/learning-bigdata/01-intro/">
+            01 Introduction - BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/02-hadoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/02-hadoop/">
+            02 Hadoop-introduction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/">
+            03 Hadoop-installation(ubuntu)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/04-hdfs/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/04-hdfs/">
+            04 HDFS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/05-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/05-mapreduce/">
+            05 MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/06-mapreduce-example/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/06-mapreduce-example/">
+            06 MapReduce-example
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/07-join-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/07-join-mapreduce/">
+            07 Join-MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/08-sqoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/08-sqoop/">
+            08 SQOOP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/09-flume/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/09-flume/">
+            09 Flume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/10-pig/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/10-pig/">
+            10 Pig
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/11-oozie/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/11-oozie/">
+            11 OOZIE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/12-testing-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/12-testing-bigdata/">
+            12 Testing-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/13-faq/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/13-faq/">
+            13 FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/14-top-tools-of-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/14-top-tools-of-bigdata/">
+            14 Top-tools-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/">
+            15 Top-BigData-Analytics-tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option>
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option>
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option>
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/" >- 3nodes-Hadoop-installation-setup</option>
+    <option value="/big-data/learning-bigdata/" >
+  - 
+   Learning Big Data</option> 
+      <option value="/big-data/learning-bigdata/01-intro/"  selected>-- 01 Introduction - BigData</option>
+      <option value="/big-data/learning-bigdata/02-hadoop/" >-- 02 Hadoop-introduction</option>
+      <option value="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" >-- 03 Hadoop-installation(ubuntu)</option>
+      <option value="/big-data/learning-bigdata/04-hdfs/" >-- 04 HDFS</option>
+      <option value="/big-data/learning-bigdata/05-mapreduce/" >-- 05 MapReduce</option>
+      <option value="/big-data/learning-bigdata/06-mapreduce-example/" >-- 06 MapReduce-example</option>
+      <option value="/big-data/learning-bigdata/07-join-mapreduce/" >-- 07 Join-MapReduce</option>
+      <option value="/big-data/learning-bigdata/08-sqoop/" >-- 08 SQOOP</option>
+      <option value="/big-data/learning-bigdata/09-flume/" >-- 09 Flume</option>
+      <option value="/big-data/learning-bigdata/10-pig/" >-- 10 Pig</option>
+      <option value="/big-data/learning-bigdata/11-oozie/" >-- 11 OOZIE</option>
+      <option value="/big-data/learning-bigdata/12-testing-bigdata/" >-- 12 Testing-BigData</option>
+      <option value="/big-data/learning-bigdata/13-faq/" >-- 13 FAQ</option>
+      <option value="/big-data/learning-bigdata/14-top-tools-of-bigdata/" >-- 14 Top-tools-BigData</option>
+      <option value="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" >-- 15 Top-BigData-Analytics-tools</option>
+  
+  
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>01 Introduction - BigData</h1>
+    
+    
+    
+    
+
+<h2 id="what-is-data"><strong>What is Data?</strong></h2>
+
+<p>The quantities, characters, or symbols on which operations are performed by a computer, which may be stored and transmitted in the form of electrical signals and recorded on magnetic, optical, or mechanical recording media.</p>
+
+<h1 id="what-is-big-data"><strong>What is Big Data?</strong></h1>
+
+<p>Big Data is also <strong>data</strong> but with a <strong>huge size</strong>. Big Data is a term used to describe a collection of data that is huge in size and yet growing exponentially with time. In short such data is so large and complex that none of the traditional data management tools are able to store it or process it efficiently.</p>
+
+<p>In this tutorial, you will learn,</p>
+
+<ul>
+<li><a href="https://www.guru99.com/what-is-big-data.html#1">Examples Of Big Data</a></li>
+<li><a href="https://www.guru99.com/what-is-big-data.html#2">Types Of Big Data</a></li>
+<li><a href="https://www.guru99.com/what-is-big-data.html#3">Characteristics Of Big Data</a></li>
+<li><a href="https://www.guru99.com/what-is-big-data.html#4">Advantages Of Big Data Processing</a></li>
+</ul>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0759_WhatIsBigDa1.jpg" alt="img" /></p>
+
+<h2 id="examples-of-big-data"><strong>Examples Of Big Data</strong></h2>
+
+<p>Following are some the examples of Big Data-</p>
+
+<p>The <strong>New York Stock Exchange</strong> generates about <strong><em>one terabyte</em></strong> of new trade data per day.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0759_WhatIsBigDa2.jpg" alt="img" /></p>
+
+<p><strong>Social Media</strong></p>
+
+<p>The statistic shows that <strong><em>500+terabytes</em></strong> of new data get ingested into the databases of social media site <strong>Facebook</strong>, every day. This data is mainly generated in terms of photo and video uploads, message exchanges, putting comments etc.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0759_WhatIsBigDa3.jpg" alt="img" /></p>
+
+<p>A single <strong>Jet engine</strong> can generate <strong><em>10+terabytes</em></strong> of data in <strong><em>30 minutes</em></strong> of flight time. With many thousand flights per day, generation of data reaches up to many <strong><em>Petabytes.</em></strong></p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0759_WhatIsBigDa4.jpg" alt="img" /></p>
+
+<h2 id="types-of-big-data"><strong>Types Of Big Data</strong></h2>
+
+<p>BigData&rsquo; could be found in three forms:</p>
+
+<ol>
+<li><strong>Structured</strong></li>
+<li><strong>Unstructured</strong></li>
+<li><strong>Semi-structured</strong></li>
+</ol>
+
+<h3 id="structured"><strong>Structured</strong></h3>
+
+<p>Any data that can be stored, accessed and processed in the form of fixed format is termed as a &lsquo;structured&rsquo; data. Over the period of time, talent in computer science has achieved greater success in developing techniques for working with such kind of data (where the format is well known in advance) and also deriving value out of it. However, nowadays, we are foreseeing issues when a size of such data grows to a huge extent, typical sizes are being in the rage of multiple zettabytes.</p>
+
+<p><strong><em>Do you know? 10</em></strong><strong><em>21</em></strong> <strong><em>bytes</em></strong> equal to <strong><em>1 zettabyte</em></strong> or <strong><em>one billion terabytes</em></strong> forms <strong><em>a zettabyte</em></strong>.</p>
+
+<p>Looking at these figures one can easily understand why the name Big Data is given and imagine the challenges involved in its storage and processing.</p>
+
+<p><strong><em>Do you know?</em></strong> Data stored in a relational database management system is one example of a <strong>&lsquo;structured&rsquo;</strong> data.</p>
+
+<p><strong>Examples Of Structured Data</strong></p>
+
+<p>An &lsquo;Employee&rsquo; table in a database is an example of Structured Data</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Employee_ID</strong></th>
+<th><strong>Employee_Name</strong></th>
+<th><strong>Gender</strong></th>
+<th><strong>Department</strong></th>
+<th><strong>Salary_In_lacs</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2365</td>
+<td>Rajesh Kulkarni</td>
+<td>Male</td>
+<td>Finance</td>
+<td>650000</td>
+</tr>
+
+<tr>
+<td>3398</td>
+<td>Pratibha Joshi</td>
+<td>Female</td>
+<td>Admin</td>
+<td>650000</td>
+</tr>
+
+<tr>
+<td>7465</td>
+<td>Shushil Roy</td>
+<td>Male</td>
+<td>Admin</td>
+<td>500000</td>
+</tr>
+
+<tr>
+<td>7500</td>
+<td>Shubhojit Das</td>
+<td>Male</td>
+<td>Finance</td>
+<td>500000</td>
+</tr>
+
+<tr>
+<td>7699</td>
+<td>Priya Sane</td>
+<td>Female</td>
+<td>Finance</td>
+<td>550000</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="unstructured"><strong>Unstructured</strong></h3>
+
+<p>Any data with unknown form or the structure is classified as unstructured data. In addition to the size being huge, un-structured data poses multiple challenges in terms of its processing for deriving value out of it. A typical example of unstructured data is a heterogeneous data source containing a combination of simple text files, images, videos etc. Now day organizations have wealth of data available with them but unfortunately, they don&rsquo;t know how to derive value out of it since this data is in its raw form or unstructured format.</p>
+
+<p><strong>Examples Of Un-structured Data</strong></p>
+
+<p>The output returned by &lsquo;Google Search&rsquo;</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0759_WhatIsBigDa5.png" alt="img" /></p>
+
+<h3 id="semi-structured"><strong>Semi-structured</strong></h3>
+
+<p>Semi-structured data can contain both the forms of data. We can see semi-structured data as a structured in form but it is actually not defined with e.g. a table definition in relational DBMS. Example of semi-structured data is a data represented in an XML file.</p>
+
+<p>Examples Of Semi-structured Data</p>
+
+<p>Personal data stored in an XML file-</p>
+
+<p><rec><name>Prashant Rao</name><sex>Male</sex><age>35</age></rec>
+<rec><name>Seema R.</name><sex>Female</sex><age>41</age></rec>
+<rec><name>Satish Mane</name><sex>Male</sex><age>29</age></rec>
+<rec><name>Subrato Roy</name><sex>Male</sex><age>26</age></rec>
+<rec><name>Jeremiah J.</name><sex>Male</sex><age>35</age></rec></p>
+
+<h2 id="data-growth-over-the-years"><strong>Data Growth over the years</strong></h2>
+
+<p><img src="https://www.guru99.com/images/1/big-data-growth.jpg" alt="img" /></p>
+
+<p>Please note that web application data, which is unstructured, consists of log files, transaction history files etc. OLTP systems are built to work with structured data wherein data is stored in relations (tables).</p>
+
+<h2 id="characteristics-of-big-data"><strong>Characteristics Of Big Data</strong></h2>
+
+<p><strong><em>(i) Volume –</em></strong> The name Big Data itself is related to a size which is enormous. Size of data plays a very crucial role in determining value out of data. Also, whether a particular data can actually be considered as a Big Data or not, is dependent upon the volume of data. Hence, <strong>&lsquo;Volume&rsquo;</strong> is one characteristic which needs to be considered while dealing with Big Data.</p>
+
+<p><strong><em>(ii) Variety –</em></strong> The next aspect of Big Data is its <strong>variety</strong>.</p>
+
+<p>Variety refers to heterogeneous sources and the nature of data, both structured and unstructured. During earlier days, spreadsheets and databases were the only sources of data considered by most of the applications. Nowadays, data in the form of emails, photos, videos, monitoring devices, PDFs, audio, etc. are also being considered in the analysis applications. This variety of unstructured data poses certain issues for storage, mining and analyzing data.</p>
+
+<p><strong><em>(iii) Velocity –</em></strong> The term <strong>&lsquo;velocity&rsquo;</strong> refers to the speed of generation of data. How fast the data is generated and processed to meet the demands, determines real potential in the data.</p>
+
+<p>Big Data Velocity deals with the speed at which data flows in from sources like business processes, application logs, networks, and social media sites, sensors,<a href="https://www.guru99.com/mobile-testing.html"> Mobile </a>devices, etc. The flow of data is massive and continuous.</p>
+
+<p><strong><em>(iv) Variability –</em></strong> This refers to the inconsistency which can be shown by the data at times, thus hampering the process of being able to handle and manage the data effectively.</p>
+
+<h2 id="benefits-of-big-data-processing"><strong>Benefits of Big Data Processing</strong></h2>
+
+<p>Ability to process Big Data brings in multiple benefits, such as-</p>
+
+<ul>
+<li>- Businesses can utilize outside intelligence while taking decisions</li>
+</ul>
+
+<p>Access to social data from search engines and sites like facebook, twitter are enabling organizations to fine tune their business strategies.</p>
+
+<ul>
+<li>- Improved customer service</li>
+</ul>
+
+<p>Traditional customer feedback systems are getting replaced by new systems designed with Big Data technologies. In these new systems, Big Data and natural language processing technologies are being used to read and evaluate consumer responses.</p>
+
+<ul>
+<li>- Early identification of risk to the product/services, if any
+
+<ul>
+<li>Better operational efficiency</li>
+</ul></li>
+</ul>
+
+<p>Big Data technologies can be used for creating a staging area or landing zone for new data before identifying what data should be moved to the data warehouse. In addition, such integration of Big Data technologies and data warehouse helps an organization to offload infrequently accessed data.</p>
+
+<h2 id="summary"><strong>Summary</strong></h2>
+
+<ul>
+<li>Big Data is defined as data that is huge in size. Bigdata is a term used to describe a collection of data that is huge in size and yet growing exponentially with time.</li>
+<li>Examples of Big Data generation includes stock exchanges, social media sites, jet engines, etc.</li>
+<li>Big Data could be 1) Structured, 2) Unstructured, 3) Semi-structured</li>
+<li>Volume, Variety, Velocity, and Variability are few Characteristics of Bigdata</li>
+<li>Improved customer service, better operational efficiency, Better Decision Making are few advantages of Bigdata</li>
+</ul>
+
+<h2 id="02-hadoop-intro">02 Hadoop Intro</h2>
+
+<p><a href="/big-data/learning-bigdata/02-hadoop/">02 Hadoop Introduction</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/big-data/learning-bigdata/" title="Learning Big Data"> <i class="fa fa-chevron-left"></i><label>Learning Big Data</label></a>
+    <a class="nav nav-next" href="/big-data/learning-bigdata/02-hadoop/" title="02 Hadoop-introduction" style="margin-right: 0px;"><label>02 Hadoop-introduction</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioBig-Data/Learning-BigData/01-intro.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

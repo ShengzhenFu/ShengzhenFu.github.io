@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-15T22:29:23 CST">
+<title>02 Hadoop-introduction :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/big-data/learning-bigdata/02-hadoop/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day04/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day04/">
+            Day 04
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/big-data/learning-bigdata/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/learning-bigdata/">Learning Big Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/learning-bigdata/01-intro/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/01-intro/">
+            01 Introduction - BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/02-hadoop/" class="dd-item active">
+        <div>
+          <a href="/big-data/learning-bigdata/02-hadoop/">
+            02 Hadoop-introduction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/">
+            03 Hadoop-installation(ubuntu)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/04-hdfs/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/04-hdfs/">
+            04 HDFS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/05-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/05-mapreduce/">
+            05 MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/06-mapreduce-example/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/06-mapreduce-example/">
+            06 MapReduce-example
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/07-join-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/07-join-mapreduce/">
+            07 Join-MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/08-sqoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/08-sqoop/">
+            08 SQOOP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/09-flume/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/09-flume/">
+            09 Flume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/10-pig/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/10-pig/">
+            10 Pig
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/11-oozie/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/11-oozie/">
+            11 OOZIE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/12-testing-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/12-testing-bigdata/">
+            12 Testing-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/13-faq/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/13-faq/">
+            13 FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/14-top-tools-of-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/14-top-tools-of-bigdata/">
+            14 Top-tools-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/">
+            15 Top-BigData-Analytics-tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option>
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option>
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option>
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/" >- 3nodes-Hadoop-installation-setup</option>
+    <option value="/big-data/learning-bigdata/" >
+  - 
+   Learning Big Data</option> 
+      <option value="/big-data/learning-bigdata/01-intro/" >-- 01 Introduction - BigData</option>
+      <option value="/big-data/learning-bigdata/02-hadoop/"  selected>-- 02 Hadoop-introduction</option>
+      <option value="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" >-- 03 Hadoop-installation(ubuntu)</option>
+      <option value="/big-data/learning-bigdata/04-hdfs/" >-- 04 HDFS</option>
+      <option value="/big-data/learning-bigdata/05-mapreduce/" >-- 05 MapReduce</option>
+      <option value="/big-data/learning-bigdata/06-mapreduce-example/" >-- 06 MapReduce-example</option>
+      <option value="/big-data/learning-bigdata/07-join-mapreduce/" >-- 07 Join-MapReduce</option>
+      <option value="/big-data/learning-bigdata/08-sqoop/" >-- 08 SQOOP</option>
+      <option value="/big-data/learning-bigdata/09-flume/" >-- 09 Flume</option>
+      <option value="/big-data/learning-bigdata/10-pig/" >-- 10 Pig</option>
+      <option value="/big-data/learning-bigdata/11-oozie/" >-- 11 OOZIE</option>
+      <option value="/big-data/learning-bigdata/12-testing-bigdata/" >-- 12 Testing-BigData</option>
+      <option value="/big-data/learning-bigdata/13-faq/" >-- 13 FAQ</option>
+      <option value="/big-data/learning-bigdata/14-top-tools-of-bigdata/" >-- 14 Top-tools-BigData</option>
+      <option value="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" >-- 15 Top-BigData-Analytics-tools</option>
+  
+  
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>02 Hadoop-introduction</h1>
+    
+    
+    
+    
+
+<h2 id="what-is-hadoop"><strong>What is Hadoop?</strong></h2>
+
+<p>Apache Hadoop is an open source software framework used to develop data processing applications which are executed in a distributed computing environment.</p>
+
+<p>Applications built using HADOOP are run on large data sets distributed across clusters of commodity computers. Commodity computers are cheap and widely available. These are mainly useful for achieving greater computational power at low cost.</p>
+
+<p>Similar to data residing in a local file system of a personal computer system, in Hadoop, data resides in a distributed file system which is called as a <strong>Hadoop Distributed File system</strong>. The processing model is based on <strong>&lsquo;Data Locality&rsquo;</strong> concept wherein computational logic is sent to cluster nodes(server) containing data. This computational logic is nothing, but a compiled version of a program written in a high-level language such as Java. Such a program, processes data stored in Hadoop HDFS.</p>
+
+<p><strong><em>Do you know?</em></strong> Computer cluster consists of a set of multiple processing units (storage disk + processor) which are connected to each other and acts as a single system.</p>
+
+<p>In this tutorial, you will learn,</p>
+
+<ul>
+<li><a href="https://www.guru99.com/learn-hadoop-in-10-minutes.html#1">Hadoop EcoSystem and Components</a></li>
+<li><a href="https://www.guru99.com/learn-hadoop-in-10-minutes.html#4">Hadoop Architecture</a></li>
+<li><a href="https://www.guru99.com/learn-hadoop-in-10-minutes.html#2">Features Of &lsquo;Hadoop&rsquo;</a></li>
+<li><a href="https://www.guru99.com/learn-hadoop-in-10-minutes.html#3">Network Topology In Hadoop</a></li>
+</ul>
+
+<h2 id="hadoop-ecosystem-and-components"><strong>Hadoop EcoSystem and Components</strong></h2>
+
+<p>Below diagram shows various components in the Hadoop ecosystem-</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0803_LearnHadoop4.png" alt="img" /></p>
+
+<p>Apache Hadoop consists of two sub-projects –</p>
+
+<ol>
+<li><strong>Hadoop MapReduce:</strong> MapReduce is a computational model and software framework for writing applications which are run on Hadoop. These MapReduce programs are capable of processing enormous data in parallel on large clusters of computation nodes.</li>
+<li><strong>HDFS</strong> (<strong>Hadoop Distributed File System</strong>): HDFS takes care of the storage part of Hadoop applications. MapReduce applications consume data from HDFS. HDFS creates multiple replicas of data blocks and distributes them on compute nodes in a cluster. This distribution enables reliable and extremely rapid computations.</li>
+</ol>
+
+<p>Although Hadoop is best known for MapReduce and its distributed file system- HDFS, the term is also used for a family of related projects that fall under the umbrella of distributed computing and large-scale data processing. Other Hadoop-related projects at<a href="https://www.guru99.com/apache.html"> Apache </a>include are <strong>Hive, HBase, Mahout, Sqoop, Flume, and ZooKeeper.</strong></p>
+
+<p><strong>Hadoop Architecture</strong></p>
+
+<p><img src="https://www.guru99.com/images/1/hadoop-architecture.png" alt="img" /></p>
+
+<p>High Level Hadoop Architecture</p>
+
+<p>Hadoop has a Master-Slave Architecture for data storage and distributed data processing using MapReduce and HDFS methods.</p>
+
+<p><strong>NameNode:</strong></p>
+
+<p>NameNode represented every files and directory which is used in the namespace</p>
+
+<p><strong>DataNode:</strong></p>
+
+<p>DataNode helps you to manage the state of an HDFS node and allows you to interacts with the blocks</p>
+
+<p><strong>MasterNode:</strong></p>
+
+<p>The master node allows you to conduct parallel processing of data using Hadoop MapReduce.</p>
+
+<p><strong>Slave node:</strong></p>
+
+<p>The slave nodes are the additional machines in the Hadoop cluster which allows you to store data to conduct complex calculations. Moreover, all the slave node comes with Task Tracker and a DataNode. This allows you to synchronize the processes with the NameNode and Job Tracker respectively.</p>
+
+<p>In Hadoop, master or slave system can be set up in the cloud or on-premise</p>
+
+<p><strong>Features Of &lsquo;Hadoop&rsquo;</strong></p>
+
+<p><strong>• Suitable for Big Data Analysis</strong></p>
+
+<p>As Big Data tends to be distributed and unstructured in nature, HADOOP clusters are best suited for analysis of Big Data. Since it is processing logic (not the actual data) that flows to the computing nodes, less network bandwidth is consumed. This concept is called as <strong>data locality concept</strong> which helps increase the efficiency of Hadoop based applications.</p>
+
+<p><strong>• Scalability</strong></p>
+
+<p>HADOOP clusters can easily be scaled to any extent by adding additional cluster nodes and thus allows for the growth of Big Data. Also, scaling does not require modifications to application logic.</p>
+
+<p><strong>• Fault Tolerance</strong></p>
+
+<p>HADOOP ecosystem has a provision to replicate the input data on to other cluster nodes. That way, in the event of a cluster node failure, data processing can still proceed by using data stored on another cluster node.</p>
+
+<h2 id="network-topology-in-hadoop"><strong>Network Topology In Hadoop</strong></h2>
+
+<p>Topology (Arrangment) of the network, affects the performance of the Hadoop cluster when the size of the Hadoop cluster grows. In addition to the performance, one also needs to care about the high availability and handling of failures. In order to achieve this Hadoop, cluster formation makes use of network topology.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0803_LearnHadoop13.jpg" alt="img" /></p>
+
+<p>Typically, network bandwidth is an important factor to consider while forming any network. However, as measuring bandwidth could be difficult, in Hadoop, a network is represented as a tree and distance between nodes of this tree (number of hops) is considered as an important factor in the formation of Hadoop cluster. Here, the distance between two nodes is equal to sum of their distance to their closest common ancestor.</p>
+
+<p>Hadoop cluster consists of a data center, the rack and the node which actually executes jobs. Here, data center consists of racks and rack consists of nodes. Network bandwidth available to processes varies depending upon the location of the processes. That is, the bandwidth available becomes lesser as we go away from-</p>
+
+<ul>
+<li>Processes on the same node</li>
+<li>Different nodes on the same rack</li>
+<li>Nodes on different racks of the same data center</li>
+<li>Nodes in different data centers</li>
+</ul>
+
+<h2 id="03-hadoop-installation">03 Hadoop Installation</h2>
+
+<p><a href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/">03 Hadoop Installation</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/big-data/learning-bigdata/01-intro/" title="01 Introduction - BigData"> <i class="fa fa-chevron-left"></i><label>01 Introduction - BigData</label></a>
+    <a class="nav nav-next" href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" title="03 Hadoop-installation(ubuntu)" style="margin-right: 0px;"><label>03 Hadoop-installation(ubuntu)</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioBig-Data/Learning-BigData/02-Hadoop.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

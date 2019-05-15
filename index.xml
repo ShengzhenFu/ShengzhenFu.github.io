@@ -140,6 +140,172 @@ Example from the current website, note the pre param which allows you to insert 
     </item>
     
     <item>
+      <title>01 Introduction - BigData</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/01-intro/</guid>
+      <description>What is Data? The quantities, characters, or symbols on which operations are performed by a computer, which may be stored and transmitted in the form of electrical signals and recorded on magnetic, optical, or mechanical recording media.
+What is Big Data? Big Data is also data but with a huge size. Big Data is a term used to describe a collection of data that is huge in size and yet growing exponentially with time.</description>
+    </item>
+    
+    <item>
+      <title>02 Hadoop-introduction</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/02-hadoop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/02-hadoop/</guid>
+      <description>What is Hadoop? Apache Hadoop is an open source software framework used to develop data processing applications which are executed in a distributed computing environment.
+Applications built using HADOOP are run on large data sets distributed across clusters of commodity computers. Commodity computers are cheap and widely available. These are mainly useful for achieving greater computational power at low cost.
+Similar to data residing in a local file system of a personal computer system, in Hadoop, data resides in a distributed file system which is called as a Hadoop Distributed File system.</description>
+    </item>
+    
+    <item>
+      <title>03 Hadoop-installation(ubuntu)</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/03-hadoop-on-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/03-hadoop-on-ubuntu/</guid>
+      <description>Hadoop installation on Ubuntu  In this tutorial, we will take you through step by step process to install Apache Hadoop on a Linux box (Ubuntu). This is 2 part process
+ Part 1) Download and Install Hadoop Part 2) Configure Hadoop   There are 2 Prerequisites
+ You must have Ubuntu installed and running You must have Java Installed.  Part 1) Download and Install Hadoop
+Step 1) Add a Hadoop system user using below command</description>
+    </item>
+    
+    <item>
+      <title>04 HDFS</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/04-hdfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/04-hdfs/</guid>
+      <description>What is HDFS? HDFS is a distributed file system for storing very large data files, running on clusters of commodity hardware. It is fault tolerant, scalable, and extremely simple to expand. Hadoop comes bundled with HDFS (Hadoop Distributed File Systems).
+When data exceeds the capacity of storage on a single physical machine, it becomes essential to divide it across a number of separate machines. A file system that manages storage specific operations across a network of machines is called a distributed file system.</description>
+    </item>
+    
+    <item>
+      <title>05 MapReduce</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/05-mapreduce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/05-mapreduce/</guid>
+      <description>What is MapReduce in Hadoop? MapReduce is a programming model suitable for processing of huge data. Hadoop is capable of running MapReduce programs written in various languages: Java, Ruby, Python, and C++. MapReduce programs are parallel in nature, thus are very useful for performing large-scale data analysis using multiple machines in the cluster.
+MapReduce programs work in two phases:
+ Map phase Reduce phase.  An input to each phase is key-value pairs.</description>
+    </item>
+    
+    <item>
+      <title>06 MapReduce-example</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/06-mapreduce-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/06-mapreduce-example/</guid>
+      <description>In this tutorial, you will learn to use Hadoop and MapReduce with Example. The input data used is SalesJan2009.csv. It contains Sales related information like Product name, price, payment mode, city, country of client etc. The goal is to Find out Number of Products Sold in Each Country.
+In this tutorial, you will learn-
+ First Hadoop MapReduce Program Explanation of SalesMapper Class Explanation of SalesCountryReducer Class Explanation of SalesCountryDriver Class  First Hadoop MapReduce Program</description>
+    </item>
+    
+    <item>
+      <title>07 Join-MapReduce</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/07-join-mapreduce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/07-join-mapreduce/</guid>
+      <description>What is a Join in MapReduce?
+A join operation is used to combine two large datasets in MapReduce. However, this process involves writing lots of code to perform the actual join operation.
+Joining of two datasets begins by comparing the size of each dataset. If one dataset is smaller as compared to the other dataset then smaller dataset is distributed to every data node in the cluster. Once it is distributed, either Mapper or Reducer uses the smaller dataset to perform a lookup for matching records from the large dataset and then combine those records to form output records.</description>
+    </item>
+    
+    <item>
+      <title>08 SQOOP</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/08-sqoop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/08-sqoop/</guid>
+      <description>What is SQOOP in Hadoop?
+Apache Sqoop (SQL-to-Hadoop) is designed to support bulk import of data into HDFS from structured data stores such as relational databases, enterprise data warehouses, and NoSQL systems. Sqoop is based upon a connector architecture which supports plugins to provide connectivity to new external systems.
+An example use case of Sqoop is an enterprise that runs a nightly Sqoop import to load the day&amp;rsquo;s data from a production transactional RDBMS into aHive data warehouse for further analysis.</description>
+    </item>
+    
+    <item>
+      <title>09 Flume</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/09-flume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/09-flume/</guid>
+      <description>What is FLUME in Hadoop? Apache Flume is a system used for moving massive quantities of streaming data into HDFS. Collecting log data present in log files from web servers and aggregating it in HDFS for analysis, is one common example use case of Flume.
+Flume supports multiple sources like –
+ &amp;lsquo;tail&amp;rsquo; (which pipes data from a local file and write into HDFS via Flume, similar to Unix command &amp;lsquo;tail&amp;rsquo;) System logs Apache log4j (enable Java applications to write events to files in HDFS via Flume).</description>
+    </item>
+    
+    <item>
+      <title>10 Pig</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/10-pig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/10-pig/</guid>
+      <description>What is PIG? Pig is a high-level programming language useful for analyzing large data sets. A pig was a result of development effort at Yahoo!
+In a MapReduce framework, programs need to be translated into a series of Map and Reduce stages. However, this is not a programming model which data analysts are familiar with. So, in order to bridge this gap, an abstraction called Pig was built on top of Hadoop.</description>
+    </item>
+    
+    <item>
+      <title>11 OOZIE</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/11-oozie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/11-oozie/</guid>
+      <description>What is OOZIE?
+Apache Oozie is a workflow scheduler for Hadoop. It is a system which runs the workflow of dependent jobs. Here, users are permitted to create Directed Acyclic Graphs of workflows, which can be run in parallel and sequentially in Hadoop.
+In this tutorial, you will learn,
+ How does OOZIE work? Example Workflow Diagram Packaging and deploying an Oozie workflow application Why use Oozie? Features of Oozie  It consists of two parts:</description>
+    </item>
+    
+    <item>
+      <title>12 Testing-BigData</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/12-testing-bigdata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/12-testing-bigdata/</guid>
+      <description>What is Big Data Testing?
+BigData testing is defined as testing of Bigdata applications. Big data is a collection of large datasets that cannot be processed using traditional computing techniques.Testing of these datasets involves various tools, techniques, and frameworks to process. Big data relates to data creation, storage, retrieval and analysis that is remarkable in terms of volume, variety, and velocity. You can learn more about Big Data, Hadoop and MapReduce here</description>
+    </item>
+    
+    <item>
+      <title>13 FAQ</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/13-faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/13-faq/</guid>
+      <description>Following are frequently asked questions in interviews for freshers as well experienced developer.
+1) What is Hadoop Map Reduce?
+For processing large data sets in parallel across a Hadoop cluster, Hadoop MapReduce framework is used. Data analysis uses a two-step map and reduce process.
+2) How Hadoop MapReduce works?
+In MapReduce, during the map phase, it counts the words in each document, while in the reduce phase it aggregates the data as per the document spanning the entire collection.</description>
+    </item>
+    
+    <item>
+      <title>14 Top-tools-BigData</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/14-top-tools-of-bigdata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/14-top-tools-of-bigdata/</guid>
+      <description>Today&amp;rsquo;s market is flooded with an array of Big Data tools. They bring cost efficiency, better time management into the data analytical tasks. Here is the list of best big data tools with their key features and download links.
+1) Hadoop:
+The Apache Hadoop software library is a big data framework. It allows distributed processing of large data sets across clusters of computers. It is designed to scale up from single servers to thousands of machines.</description>
+    </item>
+    
+    <item>
+      <title>15 Top-BigData-Analytics-tools</title>
+      <link>https://shengzhenfu.github.io/big-data/learning-bigdata/15-top-bigdata-analytics-tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/learning-bigdata/15-top-bigdata-analytics-tool/</guid>
+      <description>Big Data Analytics software is widely used in providing meaningful analysis of a large set of data. This software helps in finding current market trends, customer preferences, and other information.
+Here are the 11 Top Big Data Analytics Tools with key feature and download links.
+1) Microsoft HDInsight:
+Azure HDInsight is a Spark and Hadoop service in the cloud. It provides big data cloud offerings in two categories, Standard and Premium.</description>
+    </item>
+    
+    <item>
       <title>3nodes-Hadoop-installation-setup</title>
       <link>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

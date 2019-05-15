@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-15T22:29:23 CST">
+<title>06 MapReduce-example :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/big-data/learning-bigdata/06-mapreduce-example/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day04/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day04/">
+            Day 04
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/big-data/learning-bigdata/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/big-data/learning-bigdata/">Learning Big Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/learning-bigdata/01-intro/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/01-intro/">
+            01 Introduction - BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/02-hadoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/02-hadoop/">
+            02 Hadoop-introduction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/03-hadoop-on-ubuntu/">
+            03 Hadoop-installation(ubuntu)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/04-hdfs/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/04-hdfs/">
+            04 HDFS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/05-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/05-mapreduce/">
+            05 MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/06-mapreduce-example/" class="dd-item active">
+        <div>
+          <a href="/big-data/learning-bigdata/06-mapreduce-example/">
+            06 MapReduce-example
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/07-join-mapreduce/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/07-join-mapreduce/">
+            07 Join-MapReduce
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/08-sqoop/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/08-sqoop/">
+            08 SQOOP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/09-flume/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/09-flume/">
+            09 Flume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/10-pig/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/10-pig/">
+            10 Pig
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/11-oozie/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/11-oozie/">
+            11 OOZIE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/12-testing-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/12-testing-bigdata/">
+            12 Testing-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/13-faq/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/13-faq/">
+            13 FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/14-top-tools-of-bigdata/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/14-top-tools-of-bigdata/">
+            14 Top-tools-BigData
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" class="dd-item">
+        <div>
+          <a href="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/">
+            15 Top-BigData-Analytics-tools
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option>
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option>
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option>
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/" >- 3nodes-Hadoop-installation-setup</option>
+    <option value="/big-data/learning-bigdata/" >
+  - 
+   Learning Big Data</option> 
+      <option value="/big-data/learning-bigdata/01-intro/" >-- 01 Introduction - BigData</option>
+      <option value="/big-data/learning-bigdata/02-hadoop/" >-- 02 Hadoop-introduction</option>
+      <option value="/big-data/learning-bigdata/03-hadoop-on-ubuntu/" >-- 03 Hadoop-installation(ubuntu)</option>
+      <option value="/big-data/learning-bigdata/04-hdfs/" >-- 04 HDFS</option>
+      <option value="/big-data/learning-bigdata/05-mapreduce/" >-- 05 MapReduce</option>
+      <option value="/big-data/learning-bigdata/06-mapreduce-example/"  selected>-- 06 MapReduce-example</option>
+      <option value="/big-data/learning-bigdata/07-join-mapreduce/" >-- 07 Join-MapReduce</option>
+      <option value="/big-data/learning-bigdata/08-sqoop/" >-- 08 SQOOP</option>
+      <option value="/big-data/learning-bigdata/09-flume/" >-- 09 Flume</option>
+      <option value="/big-data/learning-bigdata/10-pig/" >-- 10 Pig</option>
+      <option value="/big-data/learning-bigdata/11-oozie/" >-- 11 OOZIE</option>
+      <option value="/big-data/learning-bigdata/12-testing-bigdata/" >-- 12 Testing-BigData</option>
+      <option value="/big-data/learning-bigdata/13-faq/" >-- 13 FAQ</option>
+      <option value="/big-data/learning-bigdata/14-top-tools-of-bigdata/" >-- 14 Top-tools-BigData</option>
+      <option value="/big-data/learning-bigdata/15-top-bigdata-analytics-tool/" >-- 15 Top-BigData-Analytics-tools</option>
+  
+  
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>06 MapReduce-example</h1>
+    
+    
+    
+    
+
+<p>In this tutorial, you will learn to use Hadoop and MapReduce with Example. The input data used is <a href="https://drive.google.com/uc?export=download&amp;id=1tP8AJGSgDXwI12r2Ap07GyamMj1o0iDD">SalesJan2009.csv</a>. It contains Sales related information like Product name, price, payment mode, city, country of client etc. The goal is to <strong><em>Find out Number of Products Sold in Each Country.</em></strong></p>
+
+<p>In this tutorial, you will learn-</p>
+
+<ul>
+<li><a href="https://www.guru99.com/create-your-first-hadoop-program.html#1">First Hadoop MapReduce Program</a></li>
+<li><a href="https://www.guru99.com/create-your-first-hadoop-program.html#2">Explanation of SalesMapper Class</a></li>
+<li><a href="https://www.guru99.com/create-your-first-hadoop-program.html#3">Explanation of SalesCountryReducer Class</a></li>
+<li><a href="https://www.guru99.com/create-your-first-hadoop-program.html#4">Explanation of SalesCountryDriver Class</a></li>
+</ul>
+
+<p><strong>First Hadoop MapReduce Program</strong></p>
+
+<p><img src="https://www.guru99.com/images/1/sales-jan-2009.png" alt="img" /></p>
+
+<p>Data of SalesJan2009</p>
+
+<p>Ensure you have Hadoop installed. Before you start with the actual process, change user to &lsquo;hduser&rsquo; (id used while Hadoop configuration, you can switch to the userid used during your Hadoop config ).</p>
+
+<p>su - hduser_</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF1.png" alt="img" /></p>
+
+<p><strong>Step 1)</strong></p>
+
+<p>Create a new directory with name <strong>MapReduceTutorial</strong></p>
+
+<p>sudo mkdir MapReduceTutorial</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF2.png" alt="img" /></p>
+
+<p><strong>Give permissions</strong></p>
+
+<p>sudo chmod -R 777 MapReduceTutorial</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF3.png" alt="img" /></p>
+
+<p><strong>SalesMapper.java</strong></p>
+
+<p>package SalesCountry;  import java.io.IOException;  import org.apache.hadoop.io.IntWritable; import org.apache.hadoop.io.LongWritable; import org.apache.hadoop.io.Text; import org.apache.hadoop.mapred.*;  public class SalesMapper extends MapReduceBase implements Mapper <LongWritable, Text, Text, IntWritable> {     private final static IntWritable one = new IntWritable(1);      public void map(LongWritable key, Text value, OutputCollector <Text, IntWritable> output, Reporter reporter) throws IOException {       String valueString = value.toString();      String[] SingleCountryData = valueString.split(&ldquo;,&rdquo;);        output.collect(new Text(SingleCountryData[7]), one);    } }</p>
+
+<p><strong>SalesCountryReducer.java</strong></p>
+
+<p>package SalesCountry;  import java.io.IOException; import java.util.<em>;  import org.apache.hadoop.io.IntWritable; import org.apache.hadoop.io.Text; import org.apache.hadoop.mapred.</em>;  public class SalesCountryReducer extends MapReduceBase implements Reducer<Text, IntWritable, Text, IntWritable> {    public void reduce(Text t_key, Iterator<IntWritable> values, OutputCollector<Text,IntWritable> output, Reporter reporter) throws IOException {      Text key = t_key;       int frequencyForCountry = 0;        while (values.hasNext()) {          // replace type of value with the actual type of our value          IntWritable value = (IntWritable) values.next();            frequencyForCountry += value.get();                     }       output.collect(key, new IntWritable(frequencyForCountry));  } }</p>
+
+<p><strong>SalesCountryDriver.java</strong></p>
+
+<p>package SalesCountry;  import org.apache.hadoop.fs.Path; import org.apache.hadoop.io.<em>; import org.apache.hadoop.mapred.</em>;  public class SalesCountryDriver {     public static void main(String[] args) {         JobClient my_client = new JobClient();         // Create a configuration object for the job         JobConf job_conf = new JobConf(SalesCountryDriver.class);          // Set a name of the Job         job_conf.setJobName(&ldquo;SalePerCountry&rdquo;);          // Specify data type of output key and value         job_conf.setOutputKeyClass(Text.class);         job_conf.setOutputValueClass(IntWritable.class);          // Specify names of Mapper and Reducer Class         job_conf.setMapperClass(SalesCountry.SalesMapper.class);         job_conf.setReducerClass(SalesCountry.SalesCountryReducer.class);          // Specify formats of the data type of Input and output         job_conf.setInputFormat(TextInputFormat.class);         job_conf.setOutputFormat(TextOutputFormat.class);          // Set input and output directories using command line arguments,          //arg[0] = name of input directory on HDFS, and arg[1] =  name of output directory to be created to store the output file.          FileInputFormat.setInputPaths(job_conf, new Path(args[0]));         FileOutputFormat.setOutputPath(job_conf, new Path(args[1]));          my_client.setConf(job_conf);         try {             // Run the job              JobClient.runJob(job_conf);         } catch (Exception e) {             e.printStackTrace();         }     } }</p>
+
+<p><a href="https://drive.google.com/uc?export=download&amp;id=0B_vqvT0ovzHcekp1WkVfUVNEdVE"><strong>Download Files Here</strong></a></p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF4.png" alt="img" /></p>
+
+<p>Check the file permissions of all these files</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF5.png" alt="img" /></p>
+
+<p>and if &lsquo;read&rsquo; permissions are missing then grant the same-</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF6.png" alt="img" /></p>
+
+<p><strong>Step 2)</strong></p>
+
+<p>Export classpath</p>
+
+<p>export CLASSPATH=&ldquo;$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.2.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.2.0.jar:$HADOOP_HOME/share/hadoop/common/hadoop-common-2.2.0.jar:~/MapReduceTutorial/SalesCountry/<em>:$HADOOP_HOME/lib/</em>&ldquo;</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF7.png" alt="img" /></p>
+
+<p><strong>Step 3)</strong></p>
+
+<p>Compile<a href="https://www.guru99.com/java-tutorial.html"> Java </a>files (these files are present in directory <strong>Final-MapReduceHandsOn</strong>). Its class files will be put in the package directory</p>
+
+<p>javac -d . SalesMapper.java SalesCountryReducer.java SalesCountryDriver.java</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF8.png" alt="img" /></p>
+
+<p><strong>This warning can be safely ignored.</strong></p>
+
+<p>This compilation will create a directory in a current directory named with package name specified in the java source file (i.e. <strong>SalesCountry</strong> in our case) and put all compiled class files in it.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF9.png" alt="img" /></p>
+
+<p><strong>Step 4)</strong></p>
+
+<p>Create a new file <strong>Manifest.txt</strong></p>
+
+<p>sudo gedit Manifest.txt</p>
+
+<p>add following lines to it,</p>
+
+<p>Main-Class: SalesCountry.SalesCountryDriver</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF10.png" alt="img" /></p>
+
+<p><strong>SalesCountry.SalesCountryDriver</strong> is the name of main class. Please note that you have to hit enter key at end of this line.</p>
+
+<p><strong>Step 5)</strong></p>
+
+<p>Create a Jar file</p>
+
+<p>jar cfm ProductSalePerCountry.jar Manifest.txt SalesCountry/*.class</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF11.png" alt="img" /></p>
+
+<p>Check that the jar file is created</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF12.png" alt="img" /></p>
+
+<p><strong>Step 6)</strong></p>
+
+<p>Start Hadoop</p>
+
+<p>$HADOOP_HOME/sbin/start-dfs.sh</p>
+
+<p>$HADOOP_HOME/sbin/start-yarn.sh</p>
+
+<p><strong>Step 7)</strong></p>
+
+<p>Copy the File <strong>SalesJan2009.csv</strong> into <strong>~/inputMapReduce</strong></p>
+
+<p>Now Use below command to copy <strong>~/inputMapReduce</strong> to HDFS.</p>
+
+<p>$HADOOP_HOME/bin/hdfs dfs -copyFromLocal ~/inputMapReduce /</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF13.png" alt="img" /></p>
+
+<p>We can safely ignore this warning.</p>
+
+<p>Verify whether a file is actually copied or not.</p>
+
+<p>$HADOOP_HOME/bin/hdfs dfs -ls /inputMapReduce</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF14.png" alt="img" /></p>
+
+<p><strong>Step 8)</strong></p>
+
+<p>Run MapReduce job</p>
+
+<p>$HADOOP_HOME/bin/hadoop jar ProductSalePerCountry.jar /inputMapReduce /mapreduce_output_sales</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF15.png" alt="img" /></p>
+
+<p>This will create an output directory named mapreduce_output_sales on HDFS. Contents of this directory will be a file containing product sales per country.</p>
+
+<p><strong>Step 9)</strong></p>
+
+<p>The result can be seen through command interface as,</p>
+
+<p>$HADOOP_HOME/bin/hdfs dfs -cat /mapreduce_output_sales/part-00000</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF16.png" alt="img" /></p>
+
+<p><strong>Results can also be seen via a web interface as-</strong></p>
+
+<p>Open r in a web browser.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF17.png" alt="img" /></p>
+
+<p>Now select <strong>&lsquo;Browse the filesystem&rsquo;</strong> and navigate to <strong>/mapreduce_output_sales</strong></p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF18.png" alt="img" /></p>
+
+<p>Open <strong>part-r-00000</strong></p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0954_CreateYourF19.png" alt="img" /></p>
+
+<p><strong>Explanation of SalesMapper Class</strong></p>
+
+<p>In this section, we will understand the implementation of <strong>SalesMapper</strong> class.</p>
+
+<p>\1. We begin by specifying a name of package for our class. <strong>SalesCountry</strong> is a name of our package. Please note that output of compilation, <strong>SalesMapper.class</strong> will go into a directory named by this package name: <strong>SalesCountry</strong>.</p>
+
+<p>Followed by this, we import library packages.</p>
+
+<p>Below snapshot shows an implementation of <strong>SalesMapper</strong> class-</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0959_Understandi1.png" alt="img" /></p>
+
+<p><em>Sample Code Explanation:</em></p>
+
+<p><strong>1. SalesMapper Class Definition-</strong></p>
+
+<p>public class SalesMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {</p>
+
+<p>Every mapper class must be extended from <strong>MapReduceBase</strong> class and it must implement <strong>Mapper</strong> interface.</p>
+
+<p><strong>2. Defining &lsquo;map&rsquo; function-</strong></p>
+
+<p>public void map(LongWritable key,          Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException</p>
+
+<p>The main part of Mapper class is a <strong>&lsquo;map()&rsquo;</strong> method which accepts four arguments.</p>
+
+<p>At every call to <strong>&lsquo;map()&rsquo;</strong> method, a <strong>key-value</strong> pair (<strong>&lsquo;key&rsquo;</strong> and <strong>&lsquo;value&rsquo;</strong> in this code) is passed.</p>
+
+<p><strong>&lsquo;map()&rsquo;</strong> method begins by splitting input text which is received as an argument. It uses the tokenizer to split these lines into words.</p>
+
+<p>String valueString = value.toString(); String[] SingleCountryData = valueString.split(&ldquo;,&rdquo;);</p>
+
+<p>Here, <strong>&rsquo;,&rsquo;</strong> is used as a delimiter.</p>
+
+<p>After this, a pair is formed using a record at 7th index of array <strong>&lsquo;SingleCountryData&rsquo;</strong> and a value <strong>&lsquo;1&rsquo;</strong>.</p>
+
+<p>​        output.collect(new Text(SingleCountryData[7]), one);</p>
+
+<p>We are choosing record at 7th index because we need <strong>Country</strong> data and it is located at 7th index in array <strong>&lsquo;SingleCountryData&rsquo;</strong>.</p>
+
+<p>Please note that our input data is in the below format (where <strong>Country</strong> is at 7th index, with 0 as a starting index)-</p>
+
+<p>Transaction_date,Product,Price,Payment_Type,Name,City,State,<strong>Country</strong>,Account_Created,Last_Login,Latitude,Longitude</p>
+
+<p>An output of mapper is again a <strong>key-value</strong> pair which is outputted using <strong>&lsquo;collect()&rsquo;</strong> method of <strong>&lsquo;OutputCollector&rsquo;</strong>.</p>
+
+<p><strong>Explanation of SalesCountryReducer Class</strong></p>
+
+<p>In this section, we will understand the implementation of <strong>SalesCountryReducer</strong> class.</p>
+
+<p>\1. We begin by specifying a name of the package for our class. <strong>SalesCountry</strong> is a name of out package. Please note that output of compilation, <strong>SalesCountryReducer.class</strong> will go into a directory named by this package name: <strong>SalesCountry</strong>.</p>
+
+<p>Followed by this, we import library packages.</p>
+
+<p>Below snapshot shows an implementation of <strong>SalesCountryReducer</strong> class-</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0959_Understandi2.png" alt="img" /></p>
+
+<p><em>Code Explanation:</em></p>
+
+<p><strong>1. SalesCountryReducer Class Definition-</strong></p>
+
+<p>public class SalesCountryReducer extends MapReduceBase implements Reducer<Text, IntWritable, Text, IntWritable> {</p>
+
+<p>Here, the first two data types, <strong>&lsquo;Text&rsquo;</strong> and <strong>&lsquo;IntWritable&rsquo;</strong> are data type of input key-value to the reducer.</p>
+
+<p>Output of mapper is in the form of <CountryName1, 1>, <CountryName2, 1>. This output of mapper becomes input to the reducer. So, to align with its data type, <strong>Text</strong> and <strong>IntWritable</strong> are used as data type here.</p>
+
+<p>The last two data types, &lsquo;Text&rsquo; and &lsquo;IntWritable&rsquo; are data type of output generated by reducer in the form of key-value pair.</p>
+
+<p>Every reducer class must be extended from <strong>MapReduceBase</strong> class and it must implement <strong>Reducer</strong> interface.</p>
+
+<p><strong>2. Defining &lsquo;reduce&rsquo; function-</strong></p>
+
+<p>public void reduce( Text t_key,              Iterator<IntWritable> values,                                         OutputCollector<Text,IntWritable> output,              Reporter reporter) throws IOException {</p>
+
+<p>An input to the <strong>reduce()</strong> method is a key with a list of multiple values.</p>
+
+<p>For example, in our case, it will be-</p>
+
+<p><United Arab Emirates, 1>, <United Arab Emirates, 1>, <United Arab Emirates, 1>,<United Arab Emirates, 1>, <United Arab Emirates, 1>, <United Arab Emirates, 1>.</p>
+
+<p>This is given to reducer as <strong><United Arab Emirates, {1,1,1,1,1,1}></strong></p>
+
+<p>So, to accept arguments of this form, first two data types are used, viz., <strong>Text</strong> and <strong>Iterator<IntWritable></strong>. <strong>Text</strong> is a data type of key and <strong>Iterator<IntWritable></strong> is a data type for list of values for that key.</p>
+
+<p>The next argument is of type <strong>OutputCollector<Text,IntWritable></strong> which collects the output of reducer phase.</p>
+
+<p><strong>reduce()</strong> method begins by copying key value and initializing frequency count to 0.</p>
+
+<p>​        Text key = t_key;</p>
+
+<p>​        int frequencyForCountry = 0;</p>
+
+<p>Then, using &lsquo;<strong>while&rsquo;</strong> loop, we iterate through the list of values associated with the key and calculate the final frequency by summing up all the values.</p>
+
+<p>​</p>
+
+<p>while (values.hasNext()) {             // replace type of value with the actual type of our value             IntWritable value = (IntWritable) values.next();             frequencyForCountry += value.get();                      }</p>
+
+<p>Now, we push the result to the output collector in the form of <strong>key</strong> and obtained <strong>frequency count</strong>.</p>
+
+<p>Below code does this-</p>
+
+<p>output.collect(key, new IntWritable(frequencyForCountry));</p>
+
+<p><strong>Explanation of SalesCountryDriver Class</strong></p>
+
+<p>In this section, we will understand the implementation of <strong>SalesCountryDriver</strong> class</p>
+
+<p>\1. We begin by specifying a name of package for our class. <strong>SalesCountry</strong> is a name of out package. Please note that output of compilation, <strong>SalesCountryDriver.class</strong> will go into directory named by this package name: <strong>SalesCountry</strong>.</p>
+
+<p>Here is a line specifying package name followed by code to import library packages.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0959_Understandi3.png" alt="img" /></p>
+
+<p>\2. Define a driver class which will create a new client job, configuration object and advertise Mapper and Reducer classes.</p>
+
+<p>The driver class is responsible for setting our MapReduce job to run in Hadoop. In this class, we specify <strong>job name, data type of input/output and names of mapper and reducer classes</strong>.</p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0959_Understandi4.png" alt="img" /></p>
+
+<p>\3. In below code snippet, we set input and output directories which are used to consume input dataset and produce output, respectively.</p>
+
+<p><strong>arg[0]</strong> and <strong>arg[1]</strong> are the command-line arguments passed with a command given in MapReduce hands-on, i.e.,</p>
+
+<p><strong>$HADOOP_HOME/bin/hadoop jar ProductSalePerCountry.jar /inputMapReduce /mapreduce_output_sales</strong></p>
+
+<p><img src="https://www.guru99.com/images/Big_Data/061114_0959_Understandi5.png" alt="img" /></p>
+
+<p>\4. Trigger our job</p>
+
+<p>Below code start execution of MapReduce job-</p>
+
+<p>try {     // Run the job      JobClient.runJob(job_conf); } catch (Exception e) {     e.printStackTrace(); }</p>
+
+<h2 id="07-join-mapreduce">07 Join MapReduce</h2>
+
+<p><a href="/big-data/learning-bigdata/07-join-mapreduce/">07 Join MapReduce</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/big-data/learning-bigdata/05-mapreduce/" title="05 MapReduce"> <i class="fa fa-chevron-left"></i><label>05 MapReduce</label></a>
+    <a class="nav nav-next" href="/big-data/learning-bigdata/07-join-mapreduce/" title="07 Join-MapReduce" style="margin-right: 0px;"><label>07 Join-MapReduce</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioBig-Data/Learning-BigData/06-MapReduce-example.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

@@ -16,10 +16,6 @@
   </url>
   
   <url>
-    <loc>https://shengzhenfu.github.io/big-data/</loc>
-  </url>
-  
-  <url>
     <loc>https://shengzhenfu.github.io/java-for-beginners/day01/</loc>
   </url>
   
@@ -61,6 +57,66 @@
   </url>
   
   <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/01-intro/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/02-hadoop/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/03-hadoop-on-ubuntu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/04-hdfs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/05-mapreduce/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/06-mapreduce-example/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/07-join-mapreduce/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/08-sqoop/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/09-flume/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/10-pig/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/11-oozie/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/12-testing-bigdata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/13-faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/14-top-tools-of-bigdata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/15-top-bigdata-analytics-tool/</loc>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</loc>
   </url>
   
@@ -75,6 +131,10 @@
   <url>
     <loc>https://shengzhenfu.github.io/create-page/</loc>
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/</loc>
   </url>
   
   <url>
@@ -139,6 +199,10 @@
   
   <url>
     <loc>https://shengzhenfu.github.io/showcase/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/learning-bigdata/</loc>
   </url>
   
   <url>
