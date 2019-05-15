@@ -16,6 +16,10 @@
   </url>
   
   <url>
+    <loc>https://shengzhenfu.github.io/big-data/</loc>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/java-for-beginners/day01/</loc>
   </url>
   
@@ -44,12 +48,20 @@
   </url>
   
   <url>
+    <loc>https://shengzhenfu.github.io/it-infra/jdk_maven_env_ubuntu/</loc>
+  </url>
+  
+  <url>
     <loc>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</loc>
   </url>
   
   <url>
     <loc>https://shengzhenfu.github.io/content-organisation/extramenu/</loc>
     <lastmod>2017-04-29T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</loc>
   </url>
   
   <url>

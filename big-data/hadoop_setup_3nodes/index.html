@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doc hub</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-05-15T21:18:55 CST">
+<title>3nodes-Hadoop-installation-setup :: Doc hub</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+	<link href="/theme-flex/variant-gold.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/shengzhenfu.github.io\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/big-data/hadoop_setup_3nodes/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://shengzhenfu.github.io/"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/ShengzhenFu?tab=repositories"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/java-for-beginners/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/java-for-beginners/">A Java Tutorial for Beginners</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/java-for-beginners/day01/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day01/">
+            Day 01
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day02/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day02/">
+            Day 02
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day03/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day03/">
+            Day 03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/java-for-beginners/day04/" class="dd-item">
+        <div>
+          <a href="/java-for-beginners/day04/">
+            Day 04
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/it-infra/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/it-infra/">About IT - Infrastructure</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/it-infra/mysql-password-reset-ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/mysql-password-reset-ubuntu/">
+            Reset - Mysql - password-ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
+        <div>
+          <a href="/it-infra/kubernetes-on-centos7/">
+            k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item active">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/getting-start/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/getting-start/">Getting started - Doc hub</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-start/installation/" class="dd-item">
+        <div>
+          <a href="/getting-start/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-start/configuration/" class="dd-item">
+        <div>
+          <a href="/getting-start/configuration/">
+            Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/create-page/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/create-page/"><i class='fa fa-edit' ></i> Create Page-Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/create-page/homepage/" class="dd-item">
+        <div>
+          <a href="/create-page/homepage/">
+            Home page
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-images/" class="dd-item">
+        <div>
+          <a href="/create-page/page-images/">
+            About images
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/create-page/page-slide/" class="dd-item">
+        <div>
+          <a href="/create-page/page-slide/">
+            Present a Slide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/content-organisation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/">Content Organisation - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/logo/" class="dd-item">
+        <div>
+          <a href="/content-organisation/logo/">
+            Logo placeholder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
+        <div>
+          <a href="/content-organisation/extramenu/">
+            Extra menu entries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/content-organisation/customize-style/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/content-organisation/customize-style/">Customize website look and feel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/disable/">
+            Disable features
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/themestyle/">
+            Theme styles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
+        <div>
+          <a href="/content-organisation/customize-style/theme-variants/">
+            Theme variants
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/">Shortcodes - Doc hub</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/alert/" class="dd-item">
+        <div>
+          <a href="/shortcodes/alert/">
+            alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
+        <div>
+          <a href="/shortcodes/attachments/">
+            attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/button/" class="dd-item">
+        <div>
+          <a href="/shortcodes/button/">
+            button
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/shortcodes/children/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/">children</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/">page 1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/shortcodes/children/children-2/">page 2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/children-2/test3/">
+            page test 3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item
+        ">
+      <div>
+      <a href="/shortcodes/children/children-3/">page 3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
+        <div>
+          <a href="/shortcodes/children/test/">
+            page test
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt/">
+            excerpt
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
+        <div>
+          <a href="/shortcodes/excerpt-include/">
+            excerpt-include
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/expand/" class="dd-item">
+        <div>
+          <a href="/shortcodes/expand/">
+            expand
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/icon/" class="dd-item">
+        <div>
+          <a href="/shortcodes/icon/">
+            icon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
+        <div>
+          <a href="/shortcodes/mermaid/">
+            mermaid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/notice/" class="dd-item">
+        <div>
+          <a href="/shortcodes/notice/">
+            notice
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/panel/" class="dd-item">
+        <div>
+          <a href="/shortcodes/panel/">
+            panel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
+        <div>
+          <a href="/shortcodes/revealjs/">
+            revealjs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item
+        ">
+      <div>
+      <a href="/search/">About the Search Engine - Doc hub</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/java-for-beginners/" >
+   A Java Tutorial for Beginners</option> 
+      <option value="/java-for-beginners/day01/" >- Day 01</option>
+      <option value="/java-for-beginners/day02/" >- Day 02</option>
+      <option value="/java-for-beginners/day03/" >- Day 03</option>
+      <option value="/java-for-beginners/day04/" >- Day 04</option>
+  
+    <option value="/it-infra/" >
+   About IT - Infrastructure</option> 
+      <option value="/it-infra/mysql-password-reset-ubuntu/" >- Reset - Mysql - password-ubuntu</option>
+      <option value="/it-infra/jdk_maven_env_ubuntu/" >- Set - Env - JDK - Maven - ubuntu</option>
+      <option value="/it-infra/kubernetes-on-centos7/" >- k8s - CentOS7 - Installation</option>
+  
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/"  selected>- 3nodes-Hadoop-installation-setup</option>
+  
+    <option value="/getting-start/" >
+   Getting started - Doc hub</option> 
+      <option value="/getting-start/installation/" >- Installation</option>
+      <option value="/getting-start/configuration/" >- Configuration</option>
+  
+    <option value="/create-page/" >
+   Create Page-Doc hub</option>
+    <option value="/content-organisation/" >
+   Content Organisation - Doc hub</option>
+    <option value="/shortcodes/" >
+   Shortcodes - Doc hub</option>
+    <option value="/search/" >
+   About the Search Engine - Doc hub</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/shengzhenfu.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>3nodes-Hadoop-installation-setup</h1>
+    
+    
+    
+    
+
+<h1 id="setup-3-nodes-hadoop">Setup 3 nodes Hadoop</h1>
+
+<h2 id="hadoop-introduction">Hadoop Introduction</h2>
+
+<p>Hadoop is an open-source Apache project that allows creation of parallel processing applications on large data sets, distributed across networked nodes. It&rsquo;s composed of the Hadoop Distributed File System (HDFS™) that handles scalability and redundancy of data across nodes, and Hadoop YARN: a framework for job scheduling that executes data processing tasks on all nodes.</p>
+
+<p><img src="https://github.com/linode/docs/raw/master/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/hadoop-1-logo.png" alt="img" /></p>
+
+<h2 id="before-you-begin">Before You Begin</h2>
+
+<ol>
+<li>Follow the <a href="https://github.com/linode/docs/blob/master/docs/getting-started">Getting Started</a> guide to create three (3) nodes. They&rsquo;ll be referred to throughout this guide as node-master, node1 and node2. It&rsquo;s recommended that you set the hostname of each node to match this naming convention.</li>
+</ol>
+
+<p>Run the steps in this guide from the node-master unless otherwise specified.</p>
+
+<ol>
+<li>Follow the <a href="https://github.com/linode/docs/blob/master/docs/security/securing-your-server">Securing Your Server</a> guide to harden the three servers. Create a normal user for the install, and a user called hadoop for any Hadoop daemons. Do not create SSH keys for hadoop users. SSH keys will be addressed in a later section.</li>
+<li>Install the JDK using the appropriate guide for your distribution, <a href="https://github.com/linode/docs/blob/master/docs/development/java/install-java-on-debian">Debian</a>, <a href="https://github.com/linode/docs/blob/master/docs/development/java/install-java-on-centos">CentOS</a> or <a href="https://github.com/linode/docs/blob/master/docs/development/java/install-java-on-ubuntu-16-04">Ubuntu</a>, or grab the latest JDK from Oracle.</li>
+<li>The steps below use example IPs for each node. Adjust each example according to your configuration:</li>
+</ol>
+
+<ul>
+<li>- node-master: 192.0.2.1
+
+<ul>
+<li>node1: 192.0.2.2</li>
+<li>node2: 192.0.2.3</li>
+</ul></li>
+</ul>
+
+
+
+<div class="alert alert-warning" role="alert"> This guide is written for a non-root user. Commands that require elevated privileges are prefixed with sudo. If you’re not familiar with the sudo command, see the [Users and Groups](https://github.com/linode/docs/blob/master/docs/tools-reference/linux-users-and-groups) guide. All commands in this guide are run with the *hadoop* user if not specified otherwise. </div>
+
+
+
+<h2 id="architecture-of-a-hadoop-cluster">Architecture of a Hadoop Cluster</h2>
+
+<p>Before configuring the master and slave nodes, it&rsquo;s important to understand the different components of a Hadoop cluster.</p>
+
+<p>A master node keeps knowledge about the distributed file system, like the inode table on an ext3 filesystem, and schedules resources allocation. node-master will handle this role in this guide, and host two daemons:</p>
+
+<ul>
+<li>The NameNode: manages the distributed file system and knows where stored data blocks inside the cluster are.</li>
+<li>The ResourceManager: manages the YARN jobs and takes care of scheduling and executing processes on slave nodes.</li>
+</ul>
+
+<p>Slave nodes store the actual data and provide processing power to run the jobs. They&rsquo;ll be node1 and node2, and will host two daemons:</p>
+
+<ul>
+<li>The DataNode manages the actual data physically stored on the node; it&rsquo;s named, NameNode.</li>
+<li>The NodeManager manages execution of tasks on the node.</li>
+</ul>
+
+<h2 id="configure-the-system">Configure the System</h2>
+
+<h4 id="create-host-file-on-each-node">Create Host File on Each Node</h4>
+
+<p>For each node to communicate with its names, edit the /etc/hosts file to add the IP address of the three servers. Don&rsquo;t forget to replace the sample IP with your IP:</p>
+
+<p>file &ldquo;/etc/hosts&rdquo; &gt; 192.0.2.1 node-master 192.0.2.2 node1 192.0.2.3 node2 file</p>
+
+<p>Distribute Authentication Key-pairs for the Hadoop User</p>
+
+<p>The master node will use an ssh-connection to connect to other nodes with key-pair authentication, to manage the cluster.</p>
+
+<ol>
+<li>Login to node-master as the hadoop user, and generate an ssh-key:</li>
+</ol>
+
+<p>ssh-keygen -b 4096</p>
+
+<ol>
+<li>Copy the key to the other nodes. It&rsquo;s good practice to also copy the key to the node-master itself, so that you can also use it as a DataNode if needed. Type the following commands, and enter the hadoop user&rsquo;s password when asked. If you are prompted whether or not to add the key to known hosts, enter yes:</li>
+</ol>
+
+<p>ssh-copy-id -i $HOME/.ssh/id_rsa.pub hadoop@node-master ssh-copy-id -i $HOME/.ssh/id_rsa.pub hadoop@node1 ssh-copy-id -i $HOME/.ssh/id_rsa.pub hadoop@node2</p>
+
+<p>Download and Unpack Hadoop Binaries</p>
+
+<p>Login to node-master as the hadoop user, download the Hadoop tarball from <a href="https://hadoop.apache.org/">Hadoop project page</a>, and unzip it:</p>
+
+<p>cd wget <a href="http://apache.mindstudios.com/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz">http://apache.mindstudios.com/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz</a> tar -xzf hadoop-2.8.1.tar.gz mv hadoop-2.8.1 hadoop</p>
+
+<p>Set Environment Variables</p>
+
+<ol>
+<li>Add Hadoop binaries to your PATH. Edit /home/hadoop/.profile and add the following line:</li>
+</ol>
+
+<p>file &ldquo;/home/hadoop/.profile&rdquo; shell &gt; PATH=/home/hadoop/hadoop/bin:/home/hadoop/hadoop/sbin:$PATH</p>
+
+<p>file</p>
+
+<p>Configure the Master Node</p>
+
+<p>Configuration will be done on node-master and replicated to other nodes.</p>
+
+<p>Set JAVA_HOME</p>
+
+<ol>
+<li>Get your Java installation path. If you installed open-jdk from your package manager, you can get the path with the command:</li>
+</ol>
+
+<p>update-alternatives &ndash;display java</p>
+
+<p>Take the value of the current link and remove the trailing /bin/java. For example on Debian, the link is /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java, so JAVA_HOME should be /usr/lib/jvm/java-8-openjdk-amd64/jre.</p>
+
+<p>If you installed java from Oracle, JAVA_HOME is the path where you unzipped the java archive.</p>
+
+<ol>
+<li>Edit ~/hadoop/etc/hadoop/hadoop-env.sh and replace this line:</li>
+</ol>
+
+<p>export JAVA_HOME=${JAVA_HOME}</p>
+
+<p>with your actual java installation path. For example on a Debian with open-jdk-8:</p>
+
+<p>file &ldquo;~/hadoop/etc/hadoop/hadoop-env.sh&rdquo; shell &gt;}} export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre</p>
+
+<p>file</p>
+
+<p>Set NameNode Location</p>
+
+<p>On each node update ~/hadoop/etc/hadoop/core-site.xml you want to set the NameNode location to node-master on port 9000:</p>
+
+<p>file &ldquo;~/hadoop/etc/hadoop/core-site.xml&rdquo; xml &gt;}}</p>
+
+<p><configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://node-master:9000</value>
+    </property>
+</configuration></p>
+
+<p>file</p>
+
+<h3 id="set-path-for-hdfs">Set path for HDFS</h3>
+
+<p>Edit hdfs-site.conf:</p>
+
+<p>file &ldquo;~/hadoop/etc/hadoop/hdfs-site.xml&rdquo; xml &gt;}} dfs.namenode.name.dir /home/hadoop/data/nameNode</p>
+
+<p><property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/home/hadoop/data/dataNode</value>
+</property></p>
+
+<p><property>
+        <name>dfs.replication</name>
+        <value>1</value>
+</property></p>
+
+<p>file</p>
+
+<p>The last property, dfs.replication, indicates how many times data is replicated in the cluster. You can set 2 to have all the data duplicated on the two nodes. Don&rsquo;t enter a value higher than the actual number of slave nodes.</p>
+
+<h3 id="set-yarn-as-job-scheduler">Set YARN as Job Scheduler</h3>
+
+<ol>
+<li>In ~/hadoop/etc/hadoop/, rename mapred-site.xml.template to mapred-site.xml:</li>
+</ol>
+
+<p>cd ~/hadoop/etc/hadoop mv mapred-site.xml.template mapred-site.xml</p>
+
+<ol>
+<li>Edit the file, setting yarn as the default framework for MapReduce operations:</li>
+</ol>
+
+<p>file &ldquo;~/hadoop/etc/hadoop/mapred-site.xml&rdquo; xml &gt;}}</p>
+
+<p>mapreduce.framework.name yarn</p>
+
+<p>file</p>
+
+<p>Configure YARN</p>
+
+<p>Edit yarn-site.xml:</p>
+
+<p>file&rdquo;~/hadoop/etc/hadoop/yarn-site.xml&rdquo; xml &gt;}} yarn.acl.enable 0</p>
+
+<p><property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>node-master</value>
+</property></p>
+
+<p><property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+</property></p>
+
+<p>file</p>
+
+<p>Configure Slaves</p>
+
+<p>The file slaves is used by startup scripts to start required daemons on all nodes. Edit ~/hadoop/etc/hadoop/slaves to be:</p>
+
+<p>file&rdquo;~/hadoop/etc/hadoop/slaves&rdquo; resource &gt;}} node1 node2</p>
+
+<p>file</p>
+
+<h3 id="configure-memory-allocation">Configure Memory Allocation</h3>
+
+<p>Memory allocation can be tricky on low RAM nodes because default values are not suitable for nodes with less than 8GB of RAM. This section will highlight how memory allocation works for MapReduce jobs, and provide a sample configuration for 2GB RAM nodes.</p>
+
+<p>The Memory Allocation Properties</p>
+
+<h3 id="a-yarn-job-is-executed-with-two-kind-of-resources">A YARN job is executed with two kind of resources:</h3>
+
+<ul>
+<li>An <em>Application Master</em> (AM) is responsible for monitoring the application and coordinating distributed executors in the cluster.</li>
+<li>Some executors that are created by the AM actually run the job. For a MapReduce jobs, they&rsquo;ll perform map or reduce operation, in parallel.</li>
+</ul>
+
+<p>Both are run in <em>containers</em> on slave nodes. Each slave node runs a <em>NodeManager</em> daemon that&rsquo;s responsible for container creation on the node. The whole cluster is managed by a <em>ResourceManager</em> that schedules container allocation on all the slave-nodes, depending on capacity requirements and current charge.</p>
+
+<p>Four types of resource allocations need to be configured properly for the cluster to work. These are:</p>
+
+<ol>
+<li>How much memory can be allocated for YARN containers on a single node. This limit should be higher than all the others; otherwise, container allocation will be rejected and applications will fail. However, it should not be the entire amount of RAM on the node.</li>
+</ol>
+
+<p>This value is configured in yarn-site.xml with yarn.nodemanager.resource.memory-mb.</p>
+
+<ol>
+<li>How much memory a single container can consume and the minimum memory allocation allowed. A container will never be bigger than the maximum, or else allocation will fail and will always be allocated as a multiple of the minimum amount of RAM.</li>
+</ol>
+
+<p>Those values are configured in yarn-site.xml with yarn.scheduler.maximum-allocation-mb and yarn.scheduler.minimum-allocation-mb.</p>
+
+<ol>
+<li>How much memory will be allocated to the ApplicationMaster. This is a constant value that should fit in the container maximum size.</li>
+</ol>
+
+<p>This is configured in mapred-site.xml with yarn.app.mapreduce.am.resource.mb.</p>
+
+<ol>
+<li>How much memory will be allocated to each map or reduce operation. This should be less than the maximum size.</li>
+</ol>
+
+<p>This is configured in mapred-site.xml with properties mapreduce.map.memory.mb and mapreduce.reduce.memory.mb.</p>
+
+<p>The relationship between all those properties can be seen in the following figure:</p>
+
+<p><img src="https://github.com/linode/docs/raw/master/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/hadoop-2-memory-allocation-new.png" alt="img" /></p>
+
+<h3 id="sample-configuration-for-2gb-nodes">Sample Configuration for 2GB Nodes</h3>
+
+<p>For 2GB nodes, a working configuration may be:</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>yarn.nodemanager.resource.memory-mb</td>
+<td>1536</td>
+</tr>
+
+<tr>
+<td>yarn.scheduler.maximum-allocation-mb</td>
+<td>1536</td>
+</tr>
+
+<tr>
+<td>yarn.scheduler.minimum-allocation-mb</td>
+<td>128</td>
+</tr>
+
+<tr>
+<td>yarn.app.mapreduce.am.resource.mb</td>
+<td>512</td>
+</tr>
+
+<tr>
+<td>mapreduce.map.memory.mb</td>
+<td>256</td>
+</tr>
+
+<tr>
+<td>mapreduce.reduce.memory.mb</td>
+<td>256</td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>Edit /home/hadoop/hadoop/etc/hadoop/yarn-site.xml and add the following lines:</li>
+</ol>
+
+<p>file&rdquo;~/hadoop/etc/hadoop/yarn-site.xml&rdquo; xml &gt;}}</p>
+
+<p>yarn.nodemanager.resource.memory-mb 1536 yarn.scheduler.maximum-allocation-mb 1536 yarn.scheduler.minimum-allocation-mb 128 yarn.nodemanager.vmem-check-enabled false</p>
+
+<p>file</p>
+
+<p>The last property disables virtual-memory checking and can prevent containers from being allocated properly on JDK8.</p>
+
+<ol>
+<li>Edit /home/hadoop/hadoop/etc/hadoop/mapred-site.xml and add the following lines:</li>
+</ol>
+
+<p>file&rdquo;~/hadoop/etc/hadoop/mapred-site.xml&rdquo; xml &gt;}}</p>
+
+<p>yarn.app.mapreduce.am.resource.mb 512 mapreduce.map.memory.mb 256 mapreduce.reduce.memory.mb 256</p>
+
+<p>file</p>
+
+<h3 id="duplicate-config-files-on-each-node">Duplicate Config Files on Each Node</h3>
+
+<ol>
+<li>Copy the hadoop binaries to slave nodes:</li>
+</ol>
+
+<p>cd /home/hadoop/ scp hadoop-<em>.tar.gz node1:/home/hadoop scp hadoop-</em>.tar.gz node2:/home/hadoop</p>
+
+<ol>
+<li>Connect to node1 via ssh. A password isn&rsquo;t required, thanks to the ssh keys copied above:</li>
+</ol>
+
+<p>ssh node1</p>
+
+<ol>
+<li>Unzip the binaries, rename the directory, and exit node1 to get back on the node-master:</li>
+</ol>
+
+<p>tar -xzf hadoop-2.8.1.tar.gz mv hadoop-2.8.1 hadoop exit</p>
+
+<ol>
+<li>Repeat steps 2 and 3 for node2.</li>
+<li>Copy the Hadoop configuration files to the slave nodes:</li>
+</ol>
+
+<p>for node in node1 node2; do     scp ~/hadoop/etc/hadoop/* $node:/home/hadoop/hadoop/etc/hadoop/; done</p>
+
+<h3 id="format-hdfs">Format HDFS</h3>
+
+<p>HDFS needs to be formatted like any classical file system. On node-master, run the following command:</p>
+
+<p>hdfs namenode -format</p>
+
+<p>Your Hadoop installation is now configured and ready to run.</p>
+
+<h3 id="run-and-monitor-hdfs">Run and monitor HDFS</h3>
+
+<p>This section will walk through starting HDFS on NameNode and DataNodes, and monitoring that everything is properly working and interacting with HDFS data.</p>
+
+<h3 id="start-and-stop-hdfs">Start and Stop HDFS</h3>
+
+<ol>
+<li>Start the HDFS by running the following script from node-master:</li>
+</ol>
+
+<p>start-dfs.sh</p>
+
+<p>It&rsquo;ll start NameNode and SecondaryNameNode on node-master, and DataNode on node1 and node2, according to the configuration in the slaves config file.</p>
+
+<ol>
+<li>Check that every process is running with the jps command on each node. You should get on node-master (PID will be different):</li>
+</ol>
+
+<p>21922 Jps 21603 NameNode 21787 SecondaryNameNode</p>
+
+<p>and on node1 and node2:</p>
+
+<p>19728 DataNode 19819 Jps</p>
+
+<ol>
+<li>To stop HDFS on master and slave nodes, run the following command from node-master:</li>
+</ol>
+
+<p>stop-dfs.sh</p>
+
+<h3 id="monitor-your-hdfs-cluster">Monitor your HDFS Cluster</h3>
+
+<ol>
+<li>You can get useful information about running your HDFS cluster with the hdfs dfsadmin command. Try for example:</li>
+</ol>
+
+<p>hdfs dfsadmin -report</p>
+
+<p>This will print information (e.g., capacity and usage) for all running DataNodes. To get the description of all available commands, type:</p>
+
+<p>hdfs dfsadmin -help</p>
+
+<ol>
+<li>You can also automatically use the friendlier web user interface. Point your browser to <a href="http://node-master-ip:50070/">http://node-master-IP:50070</a>and you&rsquo;ll get a user-friendly monitoring console.</li>
+</ol>
+
+<p><img src="https://github.com/linode/docs/raw/master/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/hadoop-3-hdfs-webui-wide.png" alt="img" /></p>
+
+<h3 id="put-and-get-data-to-hdfs">Put and Get Data to HDFS</h3>
+
+<p>Writing and reading to HDFS is done with command hdfs dfs. First, manually create your home directory. All other commands will use a path relative to this default home directory:</p>
+
+<p>hdfs dfs -mkdir -p /user/hadoop</p>
+
+<p>Let&rsquo;s use some textbooks from the <a href="https://www.gutenberg.org/">Gutenberg project</a> as an example.</p>
+
+<ol>
+<li>Create a <em>books</em> directory in HDFS. The following command will create it in the home directory, /user/hadoop/books:</li>
+</ol>
+
+<p>hdfs dfs -mkdir books</p>
+
+<ol>
+<li>Grab a few books from the Gutenberg project:</li>
+</ol>
+
+<p>cd /home/hadoop wget -O alice.txt <a href="https://www.gutenberg.org/files/11/11-0.txt">https://www.gutenberg.org/files/11/11-0.txt</a> wget -O holmes.txt <a href="https://www.gutenberg.org/ebooks/1661.txt.utf-8">https://www.gutenberg.org/ebooks/1661.txt.utf-8</a> wget -O frankenstein.txt <a href="https://www.gutenberg.org/ebooks/84.txt.utf-8">https://www.gutenberg.org/ebooks/84.txt.utf-8</a></p>
+
+<ol>
+<li>Put the three books through HDFS, in the booksdirectory:</li>
+</ol>
+
+<p>hdfs dfs -put alice.txt holmes.txt frankenstein.txt books</p>
+
+<ol>
+<li>List the contents of the book directory:</li>
+</ol>
+
+<p>hdfs dfs -ls books</p>
+
+<ol>
+<li>Move one of the books to the local filesystem:</li>
+</ol>
+
+<p>hdfs dfs -get books/alice.txt</p>
+
+<ol>
+<li>You can also directly print the books from HDFS:</li>
+</ol>
+
+<p>hdfs dfs -cat books/alice.txt</p>
+
+<p>There are many commands to manage your HDFS. For a complete list, you can look at the <a href="https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html">Apache HDFS shell documentation</a>, or print help with:</p>
+
+<p>hdfs dfs -help</p>
+
+<h3 id="run-yarn">Run YARN</h3>
+
+<p>HDFS is a distributed storage system, it doesn&rsquo;t provide any services for running and scheduling tasks in the cluster. This is the role of the YARN framework. The following section is about starting, monitoring, and submitting jobs to YARN.</p>
+
+<p>Start and Stop YARN</p>
+
+<ol>
+<li>Start YARN with the script:</li>
+</ol>
+
+<p>start-yarn.sh</p>
+
+<ol>
+<li>Check that everything is running with the jps command. In addition to the previous HDFS daemon, you should see a ResourceManager on node-master, and a NodeManager on node1 and node2.</li>
+<li>To stop YARN, run the following command on node-master:</li>
+</ol>
+
+<p>stop-yarn.sh</p>
+
+<p>Monitor YARN</p>
+
+<ol>
+<li>The yarn command provides utilities to manage your YARN cluster. You can also print a report of running nodes with the command:</li>
+</ol>
+
+<p>yarn node -list</p>
+
+<p>Similarly, you can get a list of running applications with command:</p>
+
+<p>yarn application -list</p>
+
+<p>To get all available parameters of the yarn command, see <a href="https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YarnCommands.html">Apache YARN documentation</a>.</p>
+
+<ol>
+<li>As with HDFS, YARN provides a friendlier web UI, started by default on port 8088 of the Resource Manager. Point your browser to <a href="http://node-master-ip:8088/">http://node-master-IP:8088</a> and browse the UI:</li>
+</ol>
+
+<p><img src="https://github.com/linode/docs/raw/master/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/hadoop-4-yarn-webui-wide.png" alt="img" /></p>
+
+<p>Submit MapReduce Jobs to YARN</p>
+
+<p>Yarn jobs are packaged into jar files and submitted to YARN for execution with the command yarn jar. The Hadoop installation package provides sample applications that can be run to test your cluster. You&rsquo;ll use them to run a word count on the three books previously uploaded to HDFS.</p>
+
+<ol>
+<li>Submit a job with the sample jar to YARN. On node-master, run:</li>
+</ol>
+
+<p>yarn jar ~/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.1.jar wordcount &ldquo;books/*&rdquo; output</p>
+
+<p>The last argument is where the output of the job will be saved - in HDFS.</p>
+
+<ol>
+<li>After the job is finished, you can get the result by querying HDFS with hdfs dfs -ls output. In case of a success, the output will resemble:</li>
+</ol>
+
+<p>Found 2 items -rw-r&ndash;r&ndash;   1 hadoop supergroup          0 2017-10-11 14:09 output/_SUCCESS -rw-r&ndash;r&ndash;   1 hadoop supergroup     269158 2017-10-11 14:09 output/part-r-00000</p>
+
+<ol>
+<li>Print the result with:</li>
+</ol>
+
+<p>hdfs dfs -cat output/part-r-00000</p>
+
+<p>Next Steps</p>
+
+<p>Now that you have a YARN cluster up and running, you can:</p>
+
+<ul>
+<li>Learn how to code your own YARN jobs with <a href="https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/WritingYarnApplications.html">Apache documentation</a>.</li>
+<li>Install Spark on top on your YARN cluster with <a href="https://github.com/linode/docs/blob/master/docs/databases/hadoop/install-configure-run-spark-on-top-of-hadoop-yarn-cluster">Linode Spark guide</a>.</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/big-data/" title="Big - Data"> <i class="fa fa-chevron-left"></i><label>Big - Data</label></a>
+    <a class="nav nav-next" href="/getting-start/" title="Getting started - Doc hub" style="margin-right: 0px;"><label>Getting started - Doc hub</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+
+    
+    <div class="github-link">
+      <a href="https://shengzhenfu.github.ioBig-Data/Hadoop_setup_3nodes.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p><strong>Doc hub</strong> @Shengzhen.Fu</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

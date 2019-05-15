@@ -97,6 +97,15 @@ role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.32&lt;/strong&gt; minimum required
     </item>
     
     <item>
+      <title>Set - Env - JDK - Maven - ubuntu</title>
+      <link>https://shengzhenfu.github.io/it-infra/jdk_maven_env_ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/it-infra/jdk_maven_env_ubuntu/</guid>
+      <description>Set env for JDK and Maven ubuntu  Edit /etc/profile  sudo vi /etc/profile  add below lines to the bottom  #set maven env  export M2_HOME=/usr/local/apache-maven-3.6.1 export CLASSPATH=$CLASSPATH:$M2_HOME/lib export PATH=$PATH:$M2_HOME/bin #set Java environment  export JAVA_HOME=/usr/lib/jdk1.8.0_191 export JRE_HOME=$JAVA_HOME/jre export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH   activate the changes  source /etc/profile /etc/profile   Edit bashrc  sudo vi ~/.bashrc  add below lines in the front  #set maven env  export M2_HOME=/usr/local/apache-maven-3.</description>
+    </item>
+    
+    <item>
       <title>k8s - CentOS7 - Installation</title>
       <link>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -128,6 +137,16 @@ role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.32&lt;/strong&gt; minimum required
 Edit the website configuration config.toml and add a [[menu.shortcuts]] entry for each link your want to add.
 Example from the current website, note the pre param which allows you to insert HTML code and used here to separate content&amp;rsquo;s menu from this &amp;ldquo;static&amp;rdquo; menu
 [[menu.shortcuts]] pre = &amp;quot;&amp;lt;h3&amp;gt;More&amp;lt;/h3&amp;gt;&amp;quot; name = &amp;quot;&amp;lt;i class=&#39;fa fa-github&#39;&amp;gt;&amp;lt;/i&amp;gt; Github repo&amp;quot; identifier = &amp;quot;ds&amp;quot; url = &amp;quot;https://github.</description>
+    </item>
+    
+    <item>
+      <title>3nodes-Hadoop-installation-setup</title>
+      <link>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</guid>
+      <description>Setup 3 nodes Hadoop Hadoop Introduction Hadoop is an open-source Apache project that allows creation of parallel processing applications on large data sets, distributed across networked nodes. It&amp;rsquo;s composed of the Hadoop Distributed File System (HDFS™) that handles scalability and redundancy of data across nodes, and Hadoop YARN: a framework for job scheduling that executes data processing tasks on all nodes.
+Before You Begin  Follow the Getting Started guide to create three (3) nodes.</description>
     </item>
     
     <item>

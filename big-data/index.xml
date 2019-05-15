@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big - Data on Doc hub</title>
+    <link>https://shengzhenfu.github.io/big-data/</link>
+    <description>Recent content in Big - Data on Doc hub</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://shengzhenfu.github.io/big-data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3nodes-Hadoop-installation-setup</title>
+      <link>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/big-data/hadoop_setup_3nodes/</guid>
+      <description>Setup 3 nodes Hadoop Hadoop Introduction Hadoop is an open-source Apache project that allows creation of parallel processing applications on large data sets, distributed across networked nodes. It&amp;rsquo;s composed of the Hadoop Distributed File System (HDFS™) that handles scalability and redundancy of data across nodes, and Hadoop YARN: a framework for job scheduling that executes data processing tasks on all nodes.
+Before You Begin  Follow the Getting Started guide to create three (3) nodes.</description>
+    </item>
+    
+  </channel>
+</rss>

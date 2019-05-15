@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-05-13T23:41:15 CST">
+<meta name="revised" content="2019-05-15T21:18:55 CST">
 <title>About IT - Infrastructure :: Doc hub</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -116,10 +116,33 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/it-infra/jdk_maven_env_ubuntu/" class="dd-item">
+        <div>
+          <a href="/it-infra/jdk_maven_env_ubuntu/">
+            Set - Env - JDK - Maven - ubuntu
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/it-infra/kubernetes-on-centos7/" class="dd-item">
         <div>
           <a href="/it-infra/kubernetes-on-centos7/">
             k8s - CentOS7 - Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/big-data/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/big-data/">Big - Data</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/big-data/hadoop_setup_3nodes/" class="dd-item">
+        <div>
+          <a href="/big-data/hadoop_setup_3nodes/">
+            3nodes-Hadoop-installation-setup
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -417,7 +440,12 @@
     <option value="/it-infra/"  selected>
    About IT - Infrastructure</option> 
       <option value="/it-infra/mysql-password-reset-ubuntu/" >- Reset - Mysql - password-ubuntu</option>
+      <option value="/it-infra/jdk_maven_env_ubuntu/" >- Set - Env - JDK - Maven - ubuntu</option>
       <option value="/it-infra/kubernetes-on-centos7/" >- k8s - CentOS7 - Installation</option>
+  
+    <option value="/big-data/" >
+   Big - Data</option> 
+      <option value="/big-data/hadoop_setup_3nodes/" >- 3nodes-Hadoop-installation-setup</option>
   
     <option value="/getting-start/" >
    Getting started - Doc hub</option> 
@@ -476,6 +504,11 @@
 <span><h2>
 		<a href="/it-infra/mysql-password-reset-ubuntu/" >Reset - Mysql - password-ubuntu</a></h2>
 <p>Reset MySQL root password in ubuntu  edit config file by  sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf   in [mysqld] section, below &lsquo;skip-external-locking&rsquo; add line  skip-grant-tables  restart MySQL  sudo systemctl restart mysql  enter mysql  mysql -u root -p  switch to mysql database  use mysql;  change root password to &lsquo;passwd&rsquo;：  UPDATE mysql.user SET authentication_string=password(&#39;passwd&#39;) WHERE User=&#39;root&#39; AND Host =&#39;localhost&#39;;  update plugin field：  UPDATE user SET plugin=&#34;mysql_native_password&#34;; （plugin field is used to authenticate user, if it is empty, server will use built-in method)</p>
+</span>
+
+<span><h2>
+		<a href="/it-infra/jdk_maven_env_ubuntu/" >Set - Env - JDK - Maven - ubuntu</a></h2>
+<p>Set env for JDK and Maven ubuntu  Edit /etc/profile  sudo vi /etc/profile  add below lines to the bottom  #set maven env  export M2_HOME=/usr/local/apache-maven-3.6.1 export CLASSPATH=$CLASSPATH:$M2_HOME/lib export PATH=$PATH:$M2_HOME/bin #set Java environment  export JAVA_HOME=/usr/lib/jdk1.8.0_191 export JRE_HOME=$JAVA_HOME/jre export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH   activate the changes  source /etc/profile /etc/profile   Edit bashrc  sudo vi ~/.bashrc  add below lines in the front  #set maven env  export M2_HOME=/usr/local/apache-maven-3.</p>
 </span>
 
 <span><h2>

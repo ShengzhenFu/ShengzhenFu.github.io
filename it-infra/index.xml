@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>Set - Env - JDK - Maven - ubuntu</title>
+      <link>https://shengzhenfu.github.io/it-infra/jdk_maven_env_ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shengzhenfu.github.io/it-infra/jdk_maven_env_ubuntu/</guid>
+      <description>Set env for JDK and Maven ubuntu  Edit /etc/profile  sudo vi /etc/profile  add below lines to the bottom  #set maven env  export M2_HOME=/usr/local/apache-maven-3.6.1 export CLASSPATH=$CLASSPATH:$M2_HOME/lib export PATH=$PATH:$M2_HOME/bin #set Java environment  export JAVA_HOME=/usr/lib/jdk1.8.0_191 export JRE_HOME=$JAVA_HOME/jre export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH   activate the changes  source /etc/profile /etc/profile   Edit bashrc  sudo vi ~/.bashrc  add below lines in the front  #set maven env  export M2_HOME=/usr/local/apache-maven-3.</description>
+    </item>
+    
+    <item>
       <title>k8s - CentOS7 - Installation</title>
       <link>https://shengzhenfu.github.io/it-infra/kubernetes-on-centos7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
